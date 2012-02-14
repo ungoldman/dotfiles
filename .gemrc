@@ -1,0 +1,2 @@
+# uncomment install gems without documentation to save time
+# gem: --no-ri --no-rdoc
