@@ -18,8 +18,8 @@ some basic config for a fresh install.
   * [rvm](https://rvm.beginrescueend.com/rvm/install/)
     * remember to put RVM loader in bash profile
       * `[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"`
-  * ruby 1.9.2
-    * `rvm install 1.9.2 && rvm use 1.9.2 --default`
+  * ruby 1.9.3
+    * `rvm install 1.9.3 && rvm use 1.9.3 --default`
   * postgresql
     * [Installing on Lion](http://nextmarvel.net/blog/2011/09/brew-install-postgresql-on-os-x-lion/)
   * [bundler](http://gembundler.com/)
@@ -36,6 +36,12 @@ some basic config for a fresh install.
   * [redis](http://redis.io/download)
   * [jitsu](https://github.com/nodejitsu/handbook)
     * `npm install -g jitsu`
+
+---
+
+### Apache/PHP/MySQL
+
+  * See [this tutorial](http://ratvars.com/operating-systems/mac/how-to-install-apache-php-and-mysql-stack-on-macos-lion/)
 
 ---
 
