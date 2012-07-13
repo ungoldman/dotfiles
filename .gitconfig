@@ -1,5 +1,8 @@
 [color]
   ui = auto
 [alias]
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  a = add
+  c = commit
   co = checkout
+  s = status
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
