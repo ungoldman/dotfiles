@@ -50,3 +50,28 @@ some basic config for a fresh install.
   * [tig](http://jonas.nitro.dk/tig/)
     * `brew install tig`
   * [rmtrash](http://www.nightproductions.net/cli.htm)
+
+---
+
+### Mac OS X Prefs
+
+  * Show hidden files in Finder
+
+```
+$ defaults write com.apple.Finder AppleShowAllFiles YES
+$ killall Finder
+```
+
+  * Transparent dock icons for hidden applications
+
+```
+$ defaults write com.apple.Dock showhidden -bool YES
+$ killall Dock
+```
+
+  * SublimeText2 command line tool (make sure `export PATH=$PATH:~/bin` is in your bash profile and `~/bin` exists)
+
+```
+$ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+```
+
