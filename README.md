@@ -75,3 +75,18 @@ $ killall Dock
 $ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 ```
 
+---
+
+### Fave Apps
+
+  * [iTerm 2](http://www.iterm2.com/)
+  * [Sublime Text 2](http://www.sublimetext.com/2)
+    * [Sublime Package Control](http://wbond.net/sublime_packages/package_control)
+      * [Zen Coding](http://code.google.com/p/zen-coding/) (install w/ pkg ctrl)
+  * [Chrome Canary](https://tools.google.com/dlpage/chromesxs/)
+  * [Firefox Nightly](http://nightly.mozilla.org/)
+    * [Firebug](http://getfirebug.com/)
+  * [LimeChat](http://limechat.net/mac/)
+  * [Adium](http://adium.im/)
+  * [Google Notifier](http://toolbar.google.com/gmail-helper/notifier_mac.html)
+  * [Nestopia](http://nestopia.sourceforge.net/)
