@@ -34,6 +34,16 @@ some basic config for a fresh install.
   * [npm](http://npmjs.org/)
   * [node.js](https://github.com/joyent/node/wiki/Installation)
   * [redis](http://redis.io/download)
+
+    * `brew install redis`, or this ([ref](http://jason.pureconcepts.net/2011/12/installing-node-js-npm-redis-mac-os-x/)), ensuring version is current:
+
+```
+curl -O http://redis.googlecode.com/files/redis-2.4.4.tar.gz
+tar -xzf redis-2.4.4.tar.gz
+cd redis-2.4.4
+make
+```
+
   * [jitsu](https://github.com/nodejitsu/handbook)
     * `npm install -g jitsu`
 
