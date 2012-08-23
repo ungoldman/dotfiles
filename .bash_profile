@@ -9,12 +9,24 @@ alias ni='npm install'
 alias be='bundle exec '
 alias l='ls -FlaG'
 
-alias lobash='export PS1="\[\033[32m\]$\[\033[0m\] "'
+alias lobash='export PS1="\`if [ \$? = 0 ]; then echo \[\033[32m\]$\[\033[0m\]; else echo \[\e[31m\]$\[\e[0m\]; fi\` "'
 alias nobash='export PS1=""'
 alias rebash='source ~/.bash_profile'
 alias subash='subl ~/.bash_profile'
 
 alias grep='grep --color=auto'
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
+alias halp='alias -p'
+
+function wut {
+  local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
+  [ "$gemset" != "" ] && gemset="@$gemset"
+  local version=$(echo $MY_RUBY_HOME | awk -F'-' '{print $2}')
+  [ "$version" != "" ] && version="$version"
+  local full="$version$gemset"
+  [ "$full" != "" ] && echo "$full "
+}
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
