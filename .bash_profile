@@ -3,11 +3,12 @@ export PS1="\`if [ \$? = 0 ]; then echo \[\033[32m\]ツ\[\033[0m\]; else echo \[
 export PATH=$PATH:~/bin
 export EDITOR='subl -w'
 
+alias l='ls -FlaG'
 alias g='git'
 alias gs='git status'
 alias ni='npm install'
 alias be='bundle exec '
-alias l='ls -FlaG'
+alias wut='echo ruby $(rvm_version)'
 
 alias lobash='export PS1="\`if [ \$? = 0 ]; then echo \[\033[32m\]$\[\033[0m\]; else echo \[\e[31m\]$\[\e[0m\]; fi\` "'
 alias nobash='export PS1=""'
@@ -19,7 +20,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 alias halp='alias -p'
 
-function wut {
+function rvm_version {
   local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
   [ "$gemset" != "" ] && gemset="@$gemset"
   local version=$(echo $MY_RUBY_HOME | awk -F'-' '{print $2}')
