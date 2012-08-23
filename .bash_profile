@@ -3,7 +3,20 @@ export PS1="\`if [ \$? = 0 ]; then echo \[\033[32m\]ツ\[\033[0m\]; else echo \[
 export PATH=$PATH:~/bin
 export EDITOR='subl -w'
 
-alias be='bundle exec '
+alias g='git'
 alias gs='git status'
+alias ni='npm install'
+alias be='bundle exec '
+alias l='ls -FlaG'
+
+alias lobash='export PS1="\[\033[32m\]$\[\033[0m\] "'
+alias nobash='export PS1=""'
+alias rebash='source ~/.bash_profile'
+alias subash='subl ~/.bash_profile'
+
+alias grep='grep --color=auto'
+
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
