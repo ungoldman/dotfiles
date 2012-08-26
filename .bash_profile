@@ -8,7 +8,6 @@ alias g='git'
 alias gs='git status'
 alias ni='npm install'
 alias be='bundle exec '
-alias wut='echo ruby $(rvm_version)'
 
 alias lobash='export PS1="\`if [ \$? = 0 ]; then echo \[\033[32m\]$\[\033[0m\]; else echo \[\e[31m\]$\[\e[0m\]; fi\` "'
 alias nobash='export PS1=""'
@@ -27,6 +26,12 @@ function rvm_version {
   [ "$version" != "" ] && version="$version"
   local full="$version$gemset"
   [ "$full" != "" ] && echo "$full "
+}
+alias wut='echo ruby $(rvm_version)'
+
+function mkcd {
+  mkdir -p "$*"
+  cd "$*"
 }
 
 export CLICOLOR=1
