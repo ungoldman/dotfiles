@@ -27,11 +27,14 @@ function rvm_version {
   local full="$version$gemset"
   [ "$full" != "" ] && echo "$full "
 }
-alias wut='echo ruby $(rvm_version)'
 
 function mkcd {
   mkdir -p "$*"
   cd "$*"
+}
+
+function tabname() {
+  echo -ne "\033]0;$@\\007"
 }
 
 export CLICOLOR=1
