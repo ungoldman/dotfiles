@@ -18,6 +18,8 @@ if [[ -n "$PS1" ]]; then
 
   # git
   alias g='git'
+  alias ga='git add . '
+  alias gc='git commit -m '
   alias gs='git status'
 
   # package managers
