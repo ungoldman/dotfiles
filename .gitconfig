@@ -11,9 +11,9 @@
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   unstage = reset HEAD --
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [mergetool]
-	keepBackup = true
+  keepBackup = true
 [core]
-	excludesfile = ~/.gitignore_global
-	autocrlf = false
+  excludesfile = ~/.gitignore_global
+  autocrlf = false
