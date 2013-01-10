@@ -3,6 +3,17 @@
 [alias]
   a = add
   c = commit
+  d = diff
+  w = diff --word-diff
   co = checkout
   s = status
+  sup = branch -av
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  unstage = reset HEAD --
+[credential]
+  helper = osxkeychain
+[mergetool]
+  keepBackup = true
+[core]
+  excludesfile = ~/.gitignore_global
+  autocrlf = false

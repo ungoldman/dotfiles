@@ -5,7 +5,8 @@ if [[ -n "$PS1" ]]; then
   # - shows user@hostname
   # - shows current path
   # - shows current git branch if applicable
-  export PS1="\`if [ \$? = 0 ]; then echo \[\033[32m\]ツ\[\033[0m\]; else echo \[\e[31m\]益\[\e[0m\]; fi\` \[\033[1;30m\]\A\[\033[00m\] \[\033[37m\]\u\[\033[36m\]@\[\033[0m\]\h\[\033[01;34m\] \w \[\033[31m\]\`ruby -e \"print (%x{git branch 2> /dev/null}.each_line.grep(/^\*/).first || '').gsub(/^\* (.+)$/, '(\1) ')\"\`\[\033[37m\]$\[\033[00m\] "
+  # - OMG COLORS!!!
+  export PS1="\[\033[01;34m\]\w \[\033[31m\]\`ruby -e \"print (%x{git branch 2> /dev/null}.each_line.grep(/^\*/).first || '').gsub(/^\* (.+)$/, '(\1) ')\"\`\[\033[32m\]$\[\033[0m\] "
 
   # add user bin path
   export PATH=$PATH:~/bin
@@ -21,10 +22,15 @@ if [[ -n "$PS1" ]]; then
   alias l='ls -FlaG'
   alias grep='grep --color=auto'
   alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-  alias halp='alias -p'
+
+  # FOR LOCAL TESTING ONLY
+  alias farmdb='be rake db:drop && be rake db:create && be rake db:migrate && be rake db:seed'
 
   # git
   alias g='git'
+  alias ga='git add'
+  alias gc='git commit -m'
+  alias gd='git diff'
   alias gs='git status'
 
   # package managers
@@ -36,6 +42,9 @@ if [[ -n "$PS1" ]]; then
   alias nobash='export PS1=""'
   alias rebash='source ~/.bash_profile'
   alias subash='subl ~/.bash_profile'
+
+  # get alias halp
+  alias halp='alias -p'
 
   # get ruby version
   function rvm_version {
@@ -54,7 +63,7 @@ if [[ -n "$PS1" ]]; then
   }
 
   # give your terminal session a name
-  function tabname() {
+  function tabname {
     echo -ne "\033]0;$@\\007"
   }
 
