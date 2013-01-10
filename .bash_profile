@@ -1,12 +1,12 @@
 if [[ -n "$PS1" ]]; then
 
   # fancy prompt
-  # - checks if last command was successful
-  # - shows user@hostname
-  # - shows current path
-  # - shows current git branch if applicable
-  # - OMG COLORS!!!
-  export PS1="\[\033[01;34m\]\w \[\033[31m\]\`ruby -e \"print (%x{git branch 2> /dev/null}.each_line.grep(/^\*/).first || '').gsub(/^\* (.+)$/, '(\1) ')\"\`\[\033[32m\]$\[\033[0m\] "
+  # x check if last command was successful ( \`if [ \$? = 0 ]; then echo ツ; else echo 益; fi\` )
+  # x show user@hostname ( \u@\h )
+  # √ show current path ( \w )
+  # √ show current git branch if applicable ( \$(parse_git_branch) )
+  # √ OMG COLORS!!!
+  export PS1="\[\033[01;34m\]\w \[\033[31m\]\$(parse_git_branch)\[\033[32m\]$\[\033[0m\] "
 
   # add user bin path
   export PATH=$PATH:~/bin
@@ -37,7 +37,7 @@ if [[ -n "$PS1" ]]; then
   alias ni='npm install '
   alias be='bundle exec '
 
-  # bash customization
+  # prompt options
   alias lobash='export PS1="\`if [ \$? = 0 ]; then echo \[\033[32m\]$\[\033[0m\]; else echo \[\e[31m\]$\[\e[0m\]; fi\` "'
   alias nobash='export PS1=""'
   alias rebash='source ~/.bash_profile'
@@ -86,15 +86,6 @@ if [[ -n "$PS1" ]]; then
   function parse_git_branch {
    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty)) /"
   }
-
-  # custom prompt
-  export PS1="\`if [ \$? = 0 ]; then echo \[\033[32m\]∴\[\033[0m\]; else echo \[\e[31m\]∴\[\e[0m\]; fi\` \[\033[01;34m\]\w \[\033[31m\]\$(parse_git_branch)\[\033[00m\]\[\033[32m\]$\[\033[00m\] "
-
-  # prompt options
-  alias lobash='export PS1="\`if [ \$? = 0 ]; then echo \[\033[32m\]$\[\033[0m\]; else echo \[\e[31m\]$\[\e[0m\]; fi\` "'
-  alias nobash='export PS1=""'
-  alias rebash='source ~/.bash_profile'
-  alias subash='subl ~/.bash_profile'
 
 fi
 
