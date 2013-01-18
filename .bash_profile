@@ -32,6 +32,7 @@ if [[ -n "$PS1" ]]; then
   alias gc='git commit -m'
   alias gd='git diff'
   alias gs='git status'
+  alias gw='git diff --word-diff'
 
   # package managers
   alias ni='npm install '

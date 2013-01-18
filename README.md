@@ -8,34 +8,34 @@ some basic config for a fresh install.
 
   * [osx-gcc-installer](https://github.com/kennethreitz/osx-gcc-installer) (or xcode)
   * [homebrew](https://github.com/mxcl/homebrew/wiki/installation)
-  * [git](http://git-scm.com/)
+  * [git](http://git-scm.com)
     * `brew install git`
+  * [tig](http://jonas.nitro.dk/tig)
+    * `brew install tig`
 
 ---
 
-### Ruby/Heroku
+### Ruby
 
-  * [rvm](https://rvm.beginrescueend.com/rvm/install/)
+  * [rvm](https://rvm.beginrescueend.com/rvm/install)
     * remember to put RVM loader in bash profile
       * `[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"`
   * ruby 1.9.3
     * `rvm install 1.9.3 && rvm use 1.9.3 --default`
   * postgresql
-    * [Installing on Lion](http://nextmarvel.net/blog/2011/09/brew-install-postgresql-on-os-x-lion/)
-  * [bundler](http://gembundler.com/)
+    * [Installing on Mountain Lion](https://coderwall.com/p/1mni7w)
+  * [bundler](http://gembundler.com)
     * `gem install bundler`
-  * [heroku](https://github.com/heroku/heroku)
-    * `gem install heroku`
 
 ---
 
-### Node.js/Nodejitsu
+### Node.js
 
-  * [npm](http://npmjs.org/)
+  * [npm](http://npmjs.org)
   * [node.js](https://github.com/joyent/node/wiki/Installation)
   * [redis](http://redis.io/download)
 
-    * `brew install redis`, or this ([ref](http://jason.pureconcepts.net/2011/12/installing-node-js-npm-redis-mac-os-x/)), ensuring version is current:
+    * `brew install redis`, or this ([ref](http://jason.pureconcepts.net/2011/12/installing-node-js-npm-redis-mac-os-x)), ensuring version is current:
 
 ```
 curl -O http://redis.googlecode.com/files/redis-2.4.4.tar.gz
@@ -44,22 +44,17 @@ cd redis-2.4.4
 make
 ```
 
-  * [jitsu](https://github.com/nodejitsu/handbook)
-    * `npm install -g jitsu`
-
 ---
 
 ### Apache/PHP/MySQL
 
-  * See [this tutorial](http://ratvars.com/operating-systems/mac/how-to-install-apache-php-and-mysql-stack-on-macos-lion/)
+  * [Install and configure Apache, MySQL, PHP and phpMyAdmin on OSX 10.8 Mountain Lion](http://coolestguyplanettech.com/downtown/install-and-configure-apache-mysql-php-and-phpmyadmin-osx-108-mountain-lion)
 
 ---
 
 ### Utilities
 
-  * [tig](http://jonas.nitro.dk/tig/)
-    * `brew install tig`
-  * [rmtrash](http://www.nightproductions.net/cli.htm)
+  * [rmtrash](http://www.nightproductions.net/cli.htm) if you're afraid of rm
 
 ---
 
@@ -79,7 +74,7 @@ $ defaults write com.apple.Dock showhidden -bool YES
 $ killall Dock
 ```
 
-  * SublimeText2 command line tool (make sure `export PATH=$PATH:~/bin` is in your bash profile and `~/bin` exists)
+  * SublimeText2 command line tool (make sure `~/bin` exists and is in your `PATH` first)
 
 ```
 $ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
@@ -87,7 +82,7 @@ $ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin
 
 ---
 
-### Fave Apps
+### Fave OS X Apps
 
   * [iTerm 2](http://www.iterm2.com/)
   * [Sublime Text 2](http://www.sublimetext.com/2)
@@ -98,5 +93,3 @@ $ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin
     * [Firebug](http://getfirebug.com/)
   * [LimeChat](http://limechat.net/mac/)
   * [Adium](http://adium.im/)
-  * [Google Notifier](http://toolbar.google.com/gmail-helper/notifier_mac.html)
-  * [Nestopia](http://nestopia.sourceforge.net/)
