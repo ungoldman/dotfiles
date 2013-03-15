@@ -2,14 +2,20 @@
   ui = auto
 [alias]
   a = add
+  b = branch
   c = commit
   d = diff
   w = diff --word-diff
   co = checkout
   s = status
-  sup = branch -av
+  sup = branch --all --verbose
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   unstage = reset HEAD --
+  done = branch --merged
+  todo = branch --no-merged
+  new = checkout -b
+  getall = fetch --all --prune
+  upsync = pull upstream master
 [credential]
   helper = osxkeychain
 [mergetool]
