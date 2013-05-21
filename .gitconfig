@@ -2,14 +2,26 @@
   ui = auto
 [alias]
   a = add
+  b = branch
   c = commit
   d = diff
-  w = diff --word-diff
+  dw = diff --word-diff
+  ds = diff --staged
+  dws = diff --word-diff --staged
   co = checkout
+  r = remote
   s = status
-  sup = branch -av
+  sup = branch --all --verbose
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   unstage = reset HEAD --
+  done = branch --merged
+  todo = branch --no-merged
+  new = checkout -b
+  trash = branch -d
+  getall = fetch --all --prune
+  pub = push origin
+  sync = pull upstream
+  upsync = pull upstream master
 [credential]
   helper = osxkeychain
 [mergetool]
@@ -17,3 +29,4 @@
 [core]
   excludesfile = ~/.gitignore_global
   autocrlf = false
+  ignorecase = false

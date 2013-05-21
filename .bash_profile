@@ -11,6 +11,9 @@ if [[ -n "$PS1" ]]; then
   # add user bin path
   export PATH=$PATH:~/bin
 
+  # make sure brew paths precede /usr/bin
+  export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:~/bin:$PATH"
+
   # gentlemen prefer sublimetext2
   export EDITOR='subl -w'
 
@@ -18,13 +21,23 @@ if [[ -n "$PS1" ]]; then
   export CLICOLOR=1
   export LSCOLORS=GxFxCxDxBxegedabagaced
 
+  # package managers
+  alias ni='npm install '
+  alias be='bundle exec '
+
   # utils
   alias l='ls -FlaG'
   alias grep='grep --color=auto'
   alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
-  # FOR LOCAL TESTING ONLY
+  # rails
   alias farmdb='be rake db:drop && be rake db:create && be rake db:migrate && be rake db:seed'
+
+  # middleman
+  alias mm='bundle exec middleman'
+
+  # github pull request
+  alias preq='hub pull-request'
 
   # git
   alias g='git'
@@ -34,9 +47,9 @@ if [[ -n "$PS1" ]]; then
   alias gs='git status'
   alias gw='git diff --word-diff'
 
-  # package managers
-  alias ni='npm install '
-  alias be='bundle exec '
+  # if [ -f ~/.git-completion.bash ]; then
+  #   . ~/.git-completion.bash
+  # fi
 
   # prompt options
   alias lobash='export PS1="\`if [ \$? = 0 ]; then echo \[\033[32m\]$\[\033[0m\]; else echo \[\e[31m\]$\[\e[0m\]; fi\` "'
@@ -46,6 +59,8 @@ if [[ -n "$PS1" ]]; then
 
   # get alias halp
   alias halp='alias -p'
+  # get git alias halp
+  alias galp='git config --get-regexp alias'
 
   # get ruby version
   function rvm_version {
@@ -90,4 +105,4 @@ if [[ -n "$PS1" ]]; then
 
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
