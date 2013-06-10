@@ -18,7 +18,7 @@ some basic config for a fresh install.
 ### Ruby
 
   * [rvm](https://rvm.beginrescueend.com/rvm/install)
-    * remember to put RVM loader in bash profile
+    * remember to put RVM loader in bash profile (usually at bottom)
       * `[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"`
   * ruby 1.9.3
     * `rvm install 1.9.3 && rvm use 1.9.3 --default`
@@ -87,4 +87,3 @@ $ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin
   * [LimeChat](http://limechat.net/mac/)
   * [Adium](http://adium.im/)
   * [ShadowKiller](http://unsanity.com/haxies/shadowkiller/)
-  * [SizeUp](http://www.irradiatedsoftware.com/sizeup/)
