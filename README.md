@@ -31,18 +31,10 @@ some basic config for a fresh install.
 
 ### Node.js
 
-  * [npm](http://npmjs.org)
-  * [node.js](https://github.com/joyent/node/wiki/Installation)
+  * [node](http://nodejs.org)
+    * `brew install node`
   * [redis](http://redis.io/download)
-
-    * `brew install redis`, or this ([ref](http://jason.pureconcepts.net/2011/12/installing-node-js-npm-redis-mac-os-x)), ensuring version is current:
-
-```
-curl -O http://redis.googlecode.com/files/redis-2.4.4.tar.gz
-tar -xzf redis-2.4.4.tar.gz
-cd redis-2.4.4
-make
-```
+    * `brew install redis`
 
 ---
 
