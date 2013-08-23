@@ -1,0 +1,39 @@
+  # package managers
+  alias ni='npm install '
+  alias be='bundle exec '
+
+  # utils
+  alias l='ls -FlaG'
+  alias grep='grep --color=auto'
+  alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
+  # rails
+  alias farmdb='be rake db:drop && be rake db:create && be rake db:migrate && be rake db:seed'
+
+  # middleman
+  alias mm='bundle exec middleman'
+
+  # github pull request
+  alias preq='hub pull-request'
+
+  # git
+  alias g='git'
+  alias ga='git add'
+  alias gc='git commit -m'
+  alias gd='git diff'
+  alias gs='git status'
+  alias gw='git diff --word-diff'
+
+  # alias hub to git
+  eval "$(hub alias -s)"
+
+  # prompt options
+  alias lobash='export PS1="\`if [ \$? = 0 ]; then echo \[\033[32m\]$\[\033[0m\]; else echo \[\e[31m\]$\[\e[0m\]; fi\` "'
+  alias nobash='export PS1=""'
+  alias rebash='source ~/.bash_profile'
+  alias subash='subl ~/.bash_profile'
+
+  # get alias halp
+  alias halp='alias -p'
+  # get git alias halp
+  alias galp='git config --get-regexp alias'

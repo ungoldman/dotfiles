@@ -1,0 +1,17 @@
+# fancy prompt
+# x check if last command was successful ( \`if [ \$? = 0 ]; then echo ツ; else echo 益; fi\` )
+# x show user@hostname ( \u@\h )
+# √ show current path ( \w )
+# √ show current git branch if applicable ( \$(parse_git_branch) )
+# √ OMG COLORS!!!
+export PS1="\[\033[01;34m\]\w \[\033[31m\]\$(parse_git_branch)\[\033[32m\]$\[\033[0m\] "
+
+# check if branch is clean
+function parse_git_dirty {
+ [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
+}
+
+# print branch name
+function parse_git_branch {
+ git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty)) /"
+}

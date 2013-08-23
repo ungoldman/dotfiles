@@ -1,0 +1,9 @@
+# make sure brew paths precede /usr/bin
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:~/bin:$PATH"
+
+# gentlemen prefer sublimetext2
+export EDITOR='subl -w'
+
+# pretty colors
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
