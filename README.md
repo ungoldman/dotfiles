@@ -1,6 +1,10 @@
 # dotfiles
 
-some basic config for a fresh install.
+Some basic config for a fresh install. Designed to be cloned into `~/.dotfiles` and included with the following line in your `.bash_profile`:
+
+```sh
+[ -f ~/.dotfiles/.bash_profile ] && source ~/.dotfiles/.bash_profile
+```
 
 ## Dev Environment Install List
 
