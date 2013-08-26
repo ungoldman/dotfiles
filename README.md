@@ -1,10 +1,20 @@
 # dotfiles
 
-Some basic config for a fresh install. Designed to be cloned into `~/.dotfiles` and included with the following line in your `.bash_profile`:
+Some basic config for a fresh install.
+
+Designed to be cloned into `~/.dotfiles`, as in
+
+```sh
+$ git clone git@github.com:ngoldman/dotfiles.git ~/.dotfiles
+```
+
+then included with the following line in your `.bash_profile`:
 
 ```sh
 [ -f ~/.dotfiles/.bash_profile ] && source ~/.dotfiles/.bash_profile
 ```
+
+`.bash_profile` also tries to include a `.gitignore`'d `.vars` file that's meant to include your environmental variables.
 
 ## Dev Environment Install List
 
