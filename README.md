@@ -14,7 +14,7 @@ then included with the following line in your `.bash_profile`:
 [ -f ~/.dotfiles/.bash_profile ] && source ~/.dotfiles/.bash_profile
 ```
 
-`.bash_profile` also tries to source a `.gitignore`'d `.vars` file that's meant to include your environmental variables.
+`.bash_profile` also tries to source a `.gitignore`'d `bash/.vars` file that's meant to include your environmental variables.
 
 ## Dev Environment Install List
 
@@ -39,7 +39,7 @@ then included with the following line in your `.bash_profile`:
     * `brew install chruby`
   * latest ruby
     * `ruby-install ruby` ([ref](https://github.com/postmodern/ruby-install#synopsis))
-    * note: `.langs` includes a line load chruby and automatically switch to ruby-2.x (`chruby ruby-2`)
+    * note: `bash/.langs` includes a line load chruby and automatically switch to ruby-2.x (`chruby ruby-2`)
   * [bundler](http://gembundler.com)
     * `gem install bundler`
 
