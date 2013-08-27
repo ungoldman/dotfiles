@@ -34,10 +34,12 @@ then included with the following line in your `.bash_profile`:
 ### Ruby
 
   * [ruby-install](https://github.com/postmodern/ruby-install)
+    * `brew install ruby-install`
   * [chruby](https://github.com/postmodern/chruby)
+    * `brew install chruby`
   * latest ruby
     * `ruby-install ruby` ([ref](https://github.com/postmodern/ruby-install#synopsis))
-    * note: `.bash_profile` includes a line load chruby and automatically switch to ruby-2.x
+    * note: `.langs` includes a line load chruby and automatically switch to ruby-2.x (`chruby ruby-2`)
   * [bundler](http://gembundler.com)
     * `gem install bundler`
 
