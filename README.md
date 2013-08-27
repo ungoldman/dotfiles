@@ -52,12 +52,12 @@ then included with the following line in your `.bash_profile`:
 
 ### Databases
 
-  * mysql
-    * [Install and configure Apache, MySQL, PHP and phpMyAdmin on OSX 10.8 Mountain Lion](http://coolestguyplanettech.com/downtown/install-and-configure-apache-mysql-php-and-phpmyadmin-osx-108-mountain-lion)
   * postgresql
     * [Installing on Mountain Lion](https://coderwall.com/p/1mni7w)
-  * [redis](http://redis.io/download)
+  * redis
     * `brew install redis`
+  * mysql
+    * [Install and configure Apache, MySQL, PHP and phpMyAdmin on OSX 10.8 Mountain Lion](http://coolestguyplanettech.com/downtown/install-and-configure-apache-mysql-php-and-phpmyadmin-osx-108-mountain-lion)
 
 ---
 
@@ -71,23 +71,29 @@ then included with the following line in your `.bash_profile`:
 
   * Show hidden files in Finder
 
-```
-$ defaults write com.apple.Finder AppleShowAllFiles YES
-$ killall Finder
-```
+  ```
+  $ defaults write com.apple.Finder AppleShowAllFiles YES
+  $ killall Finder
+  ```
 
   * Transparent dock icons for hidden applications
 
-```
-$ defaults write com.apple.Dock showhidden -bool YES
-$ killall Dock
-```
+  ```
+  $ defaults write com.apple.Dock showhidden -bool YES
+  $ killall Dock
+  ```
 
   * SublimeText2 command line tool (make sure `~/bin` exists and is in your `PATH` first)
 
-```
-$ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
-```
+  ```
+  $ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+  ```
+
+  * use tabs in modal dialogs
+
+  ```
+  $ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+  ```
 
 ---
 
