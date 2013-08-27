@@ -14,15 +14,16 @@ then included with the following line in your `.bash_profile`:
 [ -f ~/.dotfiles/.bash_profile ] && source ~/.dotfiles/.bash_profile
 ```
 
-`.bash_profile` also tries to include a `.gitignore`'d `.vars` file that's meant to include your environmental variables.
+`.bash_profile` also tries to source a `.gitignore`'d `.vars` file that's meant to include your environmental variables.
 
 ## Dev Environment Install List
 
 ### Global
 
-  * [osx-gcc-installer](https://github.com/kennethreitz/osx-gcc-installer) (or xcode)
+  * [osx-gcc-installer](https://github.com/kennethreitz/osx-gcc-installer)
+    * alternative: install xcode (big download), then install command lines tools from within xcode
   * [homebrew](https://github.com/mxcl/homebrew/wiki/installation)
-  * [git](http://git-scm.com)
+  * latest [git](http://git-scm.com)
     * `brew install git`
   * [tig](http://jonas.nitro.dk/tig)
     * `brew install tig`
@@ -31,13 +32,11 @@ then included with the following line in your `.bash_profile`:
 
 ### Ruby
 
-  * [rvm](https://rvm.beginrescueend.com/rvm/install)
-    * remember to put RVM loader in bash profile (usually at bottom)
-      * `[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"`
-  * ruby 1.9.3
-    * `rvm install 1.9.3 && rvm use 1.9.3 --default`
-  * postgresql
-    * [Installing on Mountain Lion](https://coderwall.com/p/1mni7w)
+  * [ruby-install](https://github.com/postmodern/ruby-install)
+  * [chruby](https://github.com/postmodern/chruby)
+  * latest ruby
+    * `ruby-install ruby` ([ref](https://github.com/postmodern/ruby-install#synopsis))
+    * note: `.bash_profile` includes a line load chruby and automatically switch to ruby-2.x
   * [bundler](http://gembundler.com)
     * `gem install bundler`
 
@@ -47,14 +46,17 @@ then included with the following line in your `.bash_profile`:
 
   * [node](http://nodejs.org)
     * `brew install node`
-  * [redis](http://redis.io/download)
-    * `brew install redis`
 
 ---
 
-### Apache/PHP/MySQL
+### Databases
 
-  * [Install and configure Apache, MySQL, PHP and phpMyAdmin on OSX 10.8 Mountain Lion](http://coolestguyplanettech.com/downtown/install-and-configure-apache-mysql-php-and-phpmyadmin-osx-108-mountain-lion)
+  * mysql
+    * [Install and configure Apache, MySQL, PHP and phpMyAdmin on OSX 10.8 Mountain Lion](http://coolestguyplanettech.com/downtown/install-and-configure-apache-mysql-php-and-phpmyadmin-osx-108-mountain-lion)
+  * postgresql
+    * [Installing on Mountain Lion](https://coderwall.com/p/1mni7w)
+  * [redis](http://redis.io/download)
+    * `brew install redis`
 
 ---
 
