@@ -1,5 +1,8 @@
+# Add `~/bin` to the `$PATH`
+export PATH="$HOME/bin:$PATH"
+
 # make sure brew paths precede /usr/bin
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:~/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
 
 # gentlemen prefer sublimetext2
 export EDITOR='subl -w'

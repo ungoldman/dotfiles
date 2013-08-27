@@ -1,6 +1,6 @@
 # dotfiles
 
-Some basic config for a fresh install.
+Some basic config for a mac dev. Relies heavily on [homebrew](https://github.com/mxcl/homebrew).
 
 Designed to be cloned into `~/.dotfiles`, as in
 
@@ -23,6 +23,7 @@ then included with the following line in your `.bash_profile`:
   * [osx-gcc-installer](https://github.com/kennethreitz/osx-gcc-installer)
     * alternative: install xcode (big download), then install command lines tools from within xcode
   * [homebrew](https://github.com/mxcl/homebrew/wiki/installation)
+    * `ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"`
   * latest [git](http://git-scm.com)
     * `brew install git`
   * [tig](http://jonas.nitro.dk/tig)
