@@ -46,6 +46,11 @@ then included with the following line in your `.bash_profile`:
 * [node](http://nodejs.org)
   * `brew install node`
 
+### Python
+
+* python
+  * `brew install python`
+
 ### Databases
 
 * postgresql
@@ -101,6 +106,10 @@ $ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 * [LimeChat](http://limechat.net/mac/)
 * [Adium](http://adium.im/)
 * [ShadowKiller](http://unsanity.com/haxies/shadowkiller/)
+
+** Tips
+
+* Run `brew doctor`, `brew update`, and `brew upgrade` frequently
 
 ## Todo
 
