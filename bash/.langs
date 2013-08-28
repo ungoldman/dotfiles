@@ -1,3 +1,6 @@
 # ruby config
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 chruby ruby-2 # default to ruby 2
+
+# python config
+export PYTHONPATH=\"$(brew --prefix)/lib/python2.7/site-packages:\$PYTHONPATH\"
