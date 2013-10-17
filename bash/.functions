@@ -40,5 +40,5 @@ function maze {
 }
 
 function argle {
-  ruby -e 'arr = (9500..9600).to_a; print "" << arr.sample.to_i.to_s(16).to_i(16) while sleep 0.05'
+  clear; ruby -e 'arr = (9500..9600).to_a; print "" << arr.sample.to_i.to_s(16).to_i(16) while sleep 0.05'
 }
