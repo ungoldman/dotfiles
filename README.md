@@ -37,7 +37,7 @@ then included with the following line in your `.bash_profile`:
   * `brew install chruby`
 * latest ruby
   * `ruby-install ruby` ([ref](https://github.com/postmodern/ruby-install#synopsis))
-  * note: `bash/.langs` includes a line load chruby and automatically switch to ruby-2.x (`chruby ruby-2`)
+  * note: `bash/.langs` includes a line to load chruby and automatically switch to ruby-2.x (`chruby ruby-2`)
 * [bundler](http://gembundler.com)
   * `gem install bundler`
 
@@ -45,6 +45,11 @@ then included with the following line in your `.bash_profile`:
 
 * [node](http://nodejs.org)
   * `brew install node`
+
+### Python
+
+* python
+  * `brew install python`
 
 ### Databases
 
@@ -101,6 +106,10 @@ $ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 * [LimeChat](http://limechat.net/mac/)
 * [Adium](http://adium.im/)
 * [ShadowKiller](http://unsanity.com/haxies/shadowkiller/)
+
+** Tips
+
+* Run `brew doctor`, `brew update`, and `brew upgrade` frequently
 
 ## Todo
 
