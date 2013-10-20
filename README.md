@@ -29,6 +29,11 @@ then included with the following line in your `.bash_profile`:
 * [tig](http://jonas.nitro.dk/tig)
   * `brew install tig`
 
+### Node.js
+
+* [node](http://nodejs.org)
+  * `brew install node`
+
 ### Ruby
 
 * [ruby-install](https://github.com/postmodern/ruby-install)
@@ -40,11 +45,6 @@ then included with the following line in your `.bash_profile`:
   * note: `bash/.langs` includes a line to load chruby and automatically switch to ruby-2.x (`chruby ruby-2`)
 * [bundler](http://gembundler.com)
   * `gem install bundler`
-
-### Node.js
-
-* [node](http://nodejs.org)
-  * `brew install node`
 
 ### Python
 
