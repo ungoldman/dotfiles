@@ -91,7 +91,7 @@ $ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin
 
 ```
 $ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
-  ```
+```
 
 ## Fave OS X Apps
 
@@ -100,6 +100,7 @@ $ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
   * [Sublime Package Control](http://wbond.net/sublime_packages/package_control)
     * [Emmet](https://github.com/sergeche/emmet-sublime)
     * [GitGutter](https://github.com/jisaacks/GitGutter)
+    * [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter)
 * [Chrome Canary](https://tools.google.com/dlpage/chromesxs/)
 * [Firefox Nightly](http://nightly.mozilla.org/)
   * [Firebug](http://getfirebug.com/)
@@ -107,7 +108,7 @@ $ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 * [Adium](http://adium.im/)
 * [ShadowKiller](http://unsanity.com/haxies/shadowkiller/)
 
-** Tips
+## Tips
 
 * Run `brew doctor`, `brew update`, and `brew upgrade` frequently
 
