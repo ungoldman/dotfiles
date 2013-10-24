@@ -20,14 +20,28 @@ then included with the following line in your `.bash_profile`:
 
 ### Global
 
-* [osx-gcc-installer](https://github.com/kennethreitz/osx-gcc-installer)
-  * alternative: install xcode (big download), then install command lines tools from within xcode
 * [homebrew](https://github.com/mxcl/homebrew/wiki/installation)
   * `ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"`
 * latest [git](http://git-scm.com)
   * `brew install git`
 * [tig](http://jonas.nitro.dk/tig)
   * `brew install tig`
+
+### Command Line Tools (GCC)
+
+This is an ongoing issue with Apple. They seem to enjoy changing how these tools are installed at every major OS update. It is a huge pain the ass.
+
+Update: Apparently with Mavericks / Xcode 5.1, Command Line Tools are no longer available via Xcode and must either be installed via the Apple Developers Tools site, **OR** by running `xcode-select --install` in your terminal. More info [here](http://stackoverflow.com/questions/9329243/xcode-4-4-command-line-tools).
+
+* ~~proprietary solution: Download Xcode, install "Command Line Tools" from Preferences -> Downloads -> Components. Takes a long time.~~ (deprecated)
+* :-1: proprietary solution: Go to Apple's developer site, search for "Command Line Tools" and download that. Requires registering as an apple developer.
+* :+1: non-apple solution: `brew tap homebrew/dupes`, then `brew install apple-gcc42`. Very quick, no registration. [Freedom](http://cdn.memegenerator.net/instances/400x/35280005.jpg)!
+
+From kennethreitz's [osx-gcc-installer](https://github.com/kennethreitz/osx-gcc-installer) readme:
+
+> For Lion and Mountain Lion users, Apple now provides an official Command Line Tools for Xcode package that you can install without needing to install Xcode itself! You can download it from Apple's developer site (free registration required) and search for "Command Line Tools".
+>
+> If you still need gcc-4.2, and you use Homebrew, you can install it using the apple-gcc42 package from homebrew/dupes.
 
 ### Node.js
 
