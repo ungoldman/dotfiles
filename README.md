@@ -63,8 +63,6 @@ Apparently with Mavericks / Xcode 5.1, Command Line Tools are no longer availabl
   * [Installing on Mountain Lion](https://coderwall.com/p/1mni7w)
 * redis
   * `brew install redis`
-* mysql
-  * [Install and configure Apache, MySQL, PHP and phpMyAdmin on OSX 10.8 Mountain Lion](http://coolestguyplanettech.com/downtown/install-and-configure-apache-mysql-php-and-phpmyadmin-osx-108-mountain-lion)
 
 ### Utilities
 
