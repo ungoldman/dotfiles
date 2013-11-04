@@ -20,14 +20,25 @@ then included with the following line in your `.bash_profile`:
 
 ### Global
 
-* [osx-gcc-installer](https://github.com/kennethreitz/osx-gcc-installer)
-  * alternative: install xcode (big download), then install command lines tools from within xcode
 * [homebrew](https://github.com/mxcl/homebrew/wiki/installation)
   * `ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"`
 * latest [git](http://git-scm.com)
   * `brew install git`
 * [tig](http://jonas.nitro.dk/tig)
   * `brew install tig`
+
+### Command Line Tools (GCC)
+
+This is an ongoing issue with Apple. They seem to enjoy changing how these tools are installed at every major OS update. It is a huge pain the ass.
+
+:+1: **non-apple solution**: `brew tap homebrew/dupes`, then `brew install apple-gcc42`. Very quick, no registration. [Freedom](http://cdn.memegenerator.net/instances/400x/35280005.jpg)!
+
+Apparently with Mavericks / Xcode 5.1, Command Line Tools are no longer available via Xcode and must either be installed via the [Apple Developer site](https://developer.apple.com/downloads/index.action?=command%20line%20tools), **OR** by running `xcode-select --install` in your terminal. More info [here](http://stackoverflow.com/questions/9329243/xcode-4-4-command-line-tools).
+
+### Node.js
+
+* [node](http://nodejs.org)
+  * `brew install node`
 
 ### Ruby
 
@@ -41,11 +52,6 @@ then included with the following line in your `.bash_profile`:
 * [bundler](http://gembundler.com)
   * `gem install bundler`
 
-### Node.js
-
-* [node](http://nodejs.org)
-  * `brew install node`
-
 ### Python
 
 * python
@@ -57,8 +63,6 @@ then included with the following line in your `.bash_profile`:
   * [Installing on Mountain Lion](https://coderwall.com/p/1mni7w)
 * redis
   * `brew install redis`
-* mysql
-  * [Install and configure Apache, MySQL, PHP and phpMyAdmin on OSX 10.8 Mountain Lion](http://coolestguyplanettech.com/downtown/install-and-configure-apache-mysql-php-and-phpmyadmin-osx-108-mountain-lion)
 
 ### Utilities
 
@@ -91,7 +95,7 @@ $ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin
 
 ```
 $ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
-  ```
+```
 
 ## Fave OS X Apps
 
@@ -100,6 +104,7 @@ $ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
   * [Sublime Package Control](http://wbond.net/sublime_packages/package_control)
     * [Emmet](https://github.com/sergeche/emmet-sublime)
     * [GitGutter](https://github.com/jisaacks/GitGutter)
+    * [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter)
 * [Chrome Canary](https://tools.google.com/dlpage/chromesxs/)
 * [Firefox Nightly](http://nightly.mozilla.org/)
   * [Firebug](http://getfirebug.com/)
@@ -107,7 +112,7 @@ $ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 * [Adium](http://adium.im/)
 * [ShadowKiller](http://unsanity.com/haxies/shadowkiller/)
 
-** Tips
+## Tips
 
 * Run `brew doctor`, `brew update`, and `brew upgrade` frequently
 
