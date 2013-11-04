@@ -4,3 +4,8 @@ chruby ruby-2 # default to ruby 2
 
 # python config
 export PYTHONPATH=\"$(brew --prefix)/lib/python2.7/site-packages:\$PYTHONPATH\"
+
+# go config
+export GOROOT=$(brew --prefix)/Cellar/go/1.1.2/libexec
+export PATH=$PATH:$GOROOT/bin
+export GOPATH=$HOME/dev/go # change this to whatever you want your GOPATH to be
