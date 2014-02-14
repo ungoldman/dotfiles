@@ -37,3 +37,9 @@ alias subash='subl ~/.dotfiles'
 alias halp='alias -p'
 # get git alias halp
 alias galp='git config --get-regexp alias'
+
+# internet
+alias browse='open -a "/Applications/Google Chrome.app"'
+
+# open tabs with list of common IPs for routers, as you do
+alias findrouter='open http://192.168.0.1/ http://192.168.1.1/ http://192.168.1.2/ http://192.168.2.1/ http://192.168.123.254/'
