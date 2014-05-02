@@ -10,6 +10,7 @@
   dws = diff --word-diff --staged
   co = checkout
   r = remote
+  rv = remote -v
   s = status
   sup = branch --all --verbose
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
@@ -18,15 +19,14 @@
   todo = branch --no-merged
   new = checkout -b
   trash = branch -d
-  getall = fetch --all --prune
+  update = fetch --all --prune
   pub = push origin
-  sync = pull upstream
-  upsync = pull upstream master
+  sync = pull -r up
 [credential]
   helper = osxkeychain
 [mergetool]
   keepBackup = true
 [core]
   excludesfile = ~/.gitignore_global
-  autocrlf = false
+  autocrlf = input
   ignorecase = false

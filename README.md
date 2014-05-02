@@ -14,7 +14,7 @@ then included with the following line in your `.bash_profile`:
 [ -f ~/.dotfiles/.bash_profile ] && source ~/.dotfiles/.bash_profile
 ```
 
-`.bash_profile` also tries to source a `.gitignore`'d `bash/.vars` file that's meant to include your environmental variables.
+`.bash_profile` also tries to source a `.gitignore`'d `bash/.private` file that's meant to include you don't want to check into git.
 
 ## Dev Environment Install List
 
