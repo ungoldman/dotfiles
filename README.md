@@ -14,7 +14,7 @@ then included with the following line in your `.bash_profile`:
 [ -f ~/.dotfiles/.bash_profile ] && source ~/.dotfiles/.bash_profile
 ```
 
-`.bash_profile` also tries to source a `.gitignore`'d `bash/.private` file that's meant to include you don't want to check into git.
+`.bash_profile` also tries to source a `.gitignore`'d `bash/.private` file that's meant to include anything you don't want to check into version control.
 
 ## Dev Environment Install List
 
