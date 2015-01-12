@@ -4,4 +4,4 @@
 # √ show current path ( \w )
 # √ show current git branch if applicable ( \$(parse_git_branch) )
 # √ OMG COLORS!!!
-export PS1="\[\033[01;34m\]\w \[\033[31m\]\$(parse_git_branch)\[\033[32m\]$\[\033[0m\] "
+export PS1="\033[1;32m∴\[\033[0m\] \[\033[32m\]\w \[\033[31m\]\$(parse_git_branch)\[\033[1;32m\]$\[\033[0m\] "
