@@ -21,7 +21,7 @@ then included with the following line in your `.bash_profile`:
 ### Global
 
 * [homebrew](https://github.com/mxcl/homebrew/wiki/installation)
-  * `ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"`
+  * `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 * latest [git](http://git-scm.com)
   * `brew install git`
 * [tig](http://jonas.nitro.dk/tig)
