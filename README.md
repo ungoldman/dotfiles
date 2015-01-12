@@ -1,11 +1,11 @@
-# dotfiles
+# .dotfiles
 
 Some basic config for a mac dev. Relies heavily on [homebrew](https://github.com/mxcl/homebrew).
 
 Designed to be cloned into `~/.dotfiles`, as in
 
 ```sh
-$ git clone git@github.com:ngoldman/dotfiles.git ~/.dotfiles
+~ $ git clone git@github.com:ngoldman/.dotfiles.git
 ```
 
 then included with the following line in your `.bash_profile`:
