@@ -1,17 +1,17 @@
-# .dotfiles
+# dotfiles
 
 Some basic config for a mac dev. Relies heavily on [homebrew](https://github.com/mxcl/homebrew).
 
-Designed to be cloned into `~/.dotfiles`, as in
+Designed to be cloned into `~/dotfiles`, as in
 
 ```sh
-~ $ git clone git@github.com:ngoldman/.dotfiles.git
+~ $ git clone git@github.com:ngoldman/dotfiles.git
 ```
 
 then included with the following line in your `.bash_profile`:
 
 ```sh
-[ -f ~/.dotfiles/.bash_profile ] && source ~/.dotfiles/.bash_profile
+[ -f ~/dotfiles/.bash_profile ] && source ~/dotfiles/.bash_profile
 ```
 
 `.bash_profile` also tries to source a `.gitignore`'d `bash/.private` file that's meant to include anything you don't want to check into version control.
