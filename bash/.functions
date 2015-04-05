@@ -14,6 +14,10 @@ function mkcd {
   cd "$*"
 }
 
+function extcount {
+  find . -iname "*.$*" | cut -d . -f1 | uniq -c
+}
+
 # give your terminal session a name
 function tabname {
   echo -ne "\033]0;$@\\007"
@@ -42,5 +46,16 @@ function toggle_desktop {
     echo "false"
     defaults write com.apple.finder CreateDesktop true; killall Finder
   fi
+}
 
+function toggle_screenshot_shadow {
+  if [ $(defaults read com.apple.screencapture disable-shadow) = true ]
+  then
+    echo "true"
+    defaults write com.apple.screencapture disable-shadow -bool false; killall SystemUIServer
+  else
+    echo "false"
+    defaults write com.apple.screencapture disable-shadow -bool true; killall SystemUIServer
+
+  fi
 }
