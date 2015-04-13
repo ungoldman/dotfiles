@@ -1,20 +1,10 @@
-# package managers
-alias ni='npm install '
-alias be='bundle exec '
-
 # utils
 alias l='ls -FlaG'
 alias grep='grep --color=auto'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
-# rails
-alias farmdb='be rake db:drop && be rake db:create && be rake db:migrate && be rake db:seed'
-
-# middleman
-alias mm='bundle exec middleman'
-
 # github pull request
-alias preq='hub pull-request'
+command -v hub >/dev/null 2>&1 && alias preq='hub pull-request'
 
 # git
 alias g='git'
@@ -25,7 +15,7 @@ alias gs='git status'
 alias gw='git diff --word-diff'
 
 # alias hub to git
-eval "$(hub alias -s)"
+command -v hub >/dev/null 2>&1 && eval "$(hub alias -s)"
 
 # prompt options
 alias rebash='source ~/.bash_profile'
