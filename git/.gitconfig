@@ -10,18 +10,13 @@
   dws = diff --word-diff --staged
   co = checkout
   r = remote
-  rv = remote -v
   s = status
   sup = branch --all --verbose
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   unstage = reset HEAD --
   done = branch --merged
   todo = branch --no-merged
-  new = checkout -b
-  trash = branch -d
   update = fetch --all --prune
-  pub = push origin
-  sync = pull -r up
 [credential]
   helper = osxkeychain
 [mergetool]
