@@ -2,6 +2,8 @@
 
 Some basic config for a mac dev machine.
 
+This is not the best set of dotfiles. However, it is my set of dotfiles.
+
 Relies heavily on [homebrew](https://github.com/mxcl/homebrew).
 
 Designed to be cloned into `~/dotfiles`, as in
