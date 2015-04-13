@@ -1,13 +1,13 @@
 {
-  "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+  "color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
   "draw_white_space": "all",
   "ensure_newline_at_eof_on_save": true,
-  "font_size": 12.0,
+  "font_size": 13.0,
   "highlight_modified_tabs": true,
   "jshint_options":
   {
     "browser": true,
-    "curly": true,
+    "curly": false,
     "eqnull": true,
     "evil": true,
     "expr": true,
@@ -19,16 +19,16 @@
   "match_brackets_angle": true,
   "rulers":
   [
-    80
+    100
   ],
   "shift_tab_unindent": true,
   "sublimelinter": false,
   "tab_size": 2,
+  "theme": "Spacegray Eighties.sublime-theme",
   "translate_tabs_to_spaces": true,
   "trim_trailing_white_space_on_save": true,
   "use_simple_full_screen": true,
   "word_wrap": true,
-  "wrap_width": 80,
   "fade_fold_buttons": false,
-  "bold_folder_labels": true
+  "wrap_width": 100
 }
