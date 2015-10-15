@@ -31,3 +31,9 @@ alias browse='open -a "/Applications/Google Chrome.app"'
 
 # open tabs with list of common IPs for routers, as you do
 alias findrouter='open http://192.168.0.1/ http://192.168.1.1/ http://192.168.1.2/ http://192.168.2.1/ http://192.168.123.254/'
+
+# serve a directory
+alias serve='python -m SimpleHTTPServer 8000'
+
+# docker
+alias dockerenv='eval "$(docker-machine env dev)"'

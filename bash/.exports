@@ -1,11 +1,15 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH"
 
+# Add local node_modules to path
+export PATH=$PATH:./node_modules/.bin
+
 # make sure brew paths precede /usr/bin
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
 
 # set sublimetext2 as default editor (expects http://www.sublimetext.com/docs/2/osx_command_line.html)
-export EDITOR='subl -w'
+export EDITOR='subl -n -w'
+export VISUAL='subl -n -w'
 
 # pretty colors
 export CLICOLOR=1

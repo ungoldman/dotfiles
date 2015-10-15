@@ -25,3 +25,4 @@
   excludesfile = ~/.gitignore_global
   autocrlf = input
   ignorecase = false
+  editor = subl -n -w
