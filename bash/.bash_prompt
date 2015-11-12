@@ -1,7 +1,1 @@
-# fancy prompt
-# x check if last command was successful ( \`if [ \$? = 0 ]; then echo ツ; else echo 益; fi\` )
-# x show user@hostname ( \u@\h )
-# √ show current path ( \w )
-# √ show current git branch if applicable ( \$(parse_git_branch) )
-# √ OMG COLORS!!!
-export PS1="\033[1;32m∴\[\033[0m\] \[\033[0;36m\]\u@\h \[\033[0;32m\]\w \[\033[31m\]\$(parse_git_branch)\[\033[1;32m\]$\[\033[0m\] "
+export PS1="${PS_GREEN_BOLD}∴ ${PS_CYAN}\u@\h ${PS_GREEN}\w ${PS_RED}\$(parse_git_branch) ${PS_GREEN_BOLD}$ ${PS_WHITE}"
