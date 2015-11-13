@@ -1,1 +1,1 @@
-export PS1="${PS_GREEN_BOLD}∴ ${PS_CYAN}\u@\h ${PS_GREEN}\w ${PS_RED}\$(parse_git_branch) ${PS_GREEN_BOLD}$ ${PS_WHITE}"
+export PS1="${PS_GREEN_BOLD}∴ ${PS_CYAN}\u@\h ${PS_GREEN}\w ${PS_RED}\$(parse_git_branch)${PS_GREEN_BOLD}$ ${PS_WHITE}"
