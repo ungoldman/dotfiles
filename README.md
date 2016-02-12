@@ -8,7 +8,7 @@
 
 These days I'm working primarily on a (very old) Macbook Pro and remote Ubuntu servers with Node and Ruby, so this setup is geared towards making those four play nice together.
 
-## Install
+## install
 
 1. Clone this repository, for example into `~/.dotfiles`.
 
@@ -26,7 +26,7 @@ DOTFILES="${HOME}/.dotfiles"
 
 Note: `.bash_profile` also tries to source a `bash/.private` file (ignored by this repository's `.gitignore`) that's meant to include anything you don't want to check into version control.
 
-## Extra things I often need to install
+## extra things I often need to install
 
 ### [node.js](http://nodejs.org)
 
@@ -94,35 +94,37 @@ Homebrew can be problematic (taking over a lot of `/usr/local`) but it gives me 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-## Mac OS X Prefs
+## osx prefs
 
-- Show hidden files in Finder
+### show hidden files in Finder
 
 ```
 $ defaults write com.apple.Finder AppleShowAllFiles YES
 $ killall Finder
 ```
 
-- Transparent dock icons for hidden applications
+### transparent dock icons for hidden applications
 
 ```
 $ defaults write com.apple.Dock showhidden -bool YES
 $ killall Dock
 ```
 
-- symlink `subl` to Sublime Text (make sure `~/bin` exists and is added to `PATH`)
+### symlink `subl` to sublime text
+
+`~/bin` is added to $PATH in `bash/.exports`.
 
 ```
 $ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 ```
 
-- use tabs in modal dialogs
+### use tabs in modal dialogs
 
 ```
 $ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 ```
 
-## handly terminal programs
+## handy terminal programs
 
 ### [htop](http://hisham.hm/htop/)
 
@@ -138,7 +140,7 @@ Terminal text editor with full mouse support and sublime-like qualities. Sometim
 npm i -g slap
 ```
 
-## nice-to-have OS X apps
+## nice-to-have osx apps
 
 - [iTerm](https://www.iterm2.com/downloads.html)
 - [Sublime Text 3](https://www.sublimetext.com/3)
