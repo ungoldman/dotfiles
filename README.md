@@ -10,17 +10,17 @@ My current setup:
 
 - laptop: early 2011 macbook pro 13"
 - server: digital ocean ubuntu 14.04
-- editor: sublime text 3 (local), slap (remote)
+- editor: [sublime text 3](https://www.sublimetext.com/3) (local), [slap](https://github.com/slap-editor/slap) (remote)
 
 ## install
 
-1. Clone this repository, for example into `~/.dotfiles`.
+First, clone this repository, for example into `~/.dotfiles`.
 
 ```sh
 ~ $ git clone git@github.com:ngoldman/dotfiles.git ~/.dotfiles
 ```
 
-2. Source it with the following line in `~/.bash_profile`, `~/.profile`, or `~/.bashrc` depending on your machine's setup.
+Next you'll need to include following lines in `~/.bash_profile`, `~/.profile`, or `~/.bashrc` depending on your machine's setup. Make sure `$DOTFILES` matches the full path to the directory you cloned this repository into.
 
 ```sh
 # include dotfiles
