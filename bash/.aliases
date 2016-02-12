@@ -3,9 +3,6 @@ alias l='ls -FlaG'
 alias grep='grep --color=auto'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
-# github pull request
-command -v hub >/dev/null 2>&1 && alias preq='hub pull-request'
-
 # git
 alias g='git'
 alias ga='git add'
@@ -16,6 +13,8 @@ alias gw='git diff --word-diff'
 
 # alias hub to git
 command -v hub >/dev/null 2>&1 && eval "$(hub alias -s)"
+# github pull request
+command -v hub >/dev/null 2>&1 && alias preq='hub pull-request'
 
 # prompt options
 alias rebash='source ~/.bash_profile'
@@ -36,4 +35,4 @@ alias findrouter='open http://192.168.0.1/ http://192.168.1.1/ http://192.168.1.
 alias serve='python -m SimpleHTTPServer 8000'
 
 # docker
-alias dockerenv='eval "$(docker-machine env dev)"'
+command -v docker-machine >/dev/null 2>&1 && alias dockerenv='eval "$(docker-machine env dev)"'

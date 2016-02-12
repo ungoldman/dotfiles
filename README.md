@@ -40,16 +40,31 @@ After installing node, upgrade to latest `npm`:
 npm i -g npm
 ```
 
+Keep node modules out of `/usr/local`.
+
+```
+npm set prefix ~/.local/share/npm
+```
+
 If you don't want to use `nvm`...
 
 #### mac
 
-Easiest is `brew install node` or the [installer]().
+Easiest is `brew install node` or the [installer](https://nodejs.org/en/download/).
 
 #### ubuntu
 
+For 4.x:
+
 ```
 curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+For 5.x:
+
+```
+curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
@@ -57,7 +72,7 @@ See https://github.com/nodesource/distributions#debinstall for more info on the 
 
 ### [ruby](https://www.ruby-lang.org)
 
-Ruby installation is still a buggy mess. These are the least complicated methods for dealing with installing and managing versions that I've found.
+Ruby installation can be messy. These are the least complicated methods for dealing with installing and managing versions that I've found.
 
 - [ruby-install](https://github.com/postmodern/ruby-install)
   - `brew install ruby-install`
@@ -71,7 +86,7 @@ Ruby installation is still a buggy mess. These are the least complicated methods
 
 ### [homebrew](http://brew.sh)
 
-Homebrew can be problematic but it gives me access to a lot of packages I need to work with in a fairly easy to handle way. Install like so:
+Homebrew can be problematic (taking over a lot of `/usr/local`) but it gives me access to a lot of packages I need to work with in a fairly easy to handle way. Install like so:
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
