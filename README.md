@@ -6,7 +6,11 @@
 
 **These are my dotfiles. There are many like them, but these ones are mine.**
 
-These days I'm working primarily on a (very old) Macbook Pro and remote Ubuntu servers with Node and Ruby, so this setup is geared towards making those four play nice together.
+My current setup:
+
+- laptop: early 2011 macbook pro 13"
+- server: digital ocean ubuntu 14.04
+- editor: sublime text 3 (local), slap (remote)
 
 ## install
 
