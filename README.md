@@ -6,7 +6,7 @@
 
 **These are my dotfiles. There are many like them, but these ones are mine.**
 
-I work primarily on Mac OS X and Ubuntu with node.js these days so this setup is geared towards making those three work nicely together.
+These days I'm working primarily on a (very old) Macbook Pro and remote Ubuntu servers with node and ruby, so this setup is geared towards making those four play nice together.
 
 ## Install
 
@@ -24,11 +24,7 @@ I work primarily on Mac OS X and Ubuntu with node.js these days so this setup is
 
 Note: `.bash_profile` also tries to source a `bash/.private` file (ignored by this repository's `.gitignore`) that's meant to include anything you don't want to check into version control.
 
---
-
-# Notes
-
-## Things I often need to install
+## Extra things I often need to install
 
 ### [node.js](http://nodejs.org)
 
@@ -46,11 +42,11 @@ npm i -g npm
 
 If you don't want to use `nvm`...
 
-#### Mac
+#### mac
 
-Easiest is [homebrew](http://brew.sh): `brew install node`
+Easiest is `brew install node` or the [installer]().
 
-#### Ubuntu
+#### ubuntu
 
 ```
 curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
@@ -59,9 +55,9 @@ sudo apt-get install -y nodejs
 
 See https://github.com/nodesource/distributions#debinstall for more info on the above method (not easy to find).
 
-### Ruby
+### [ruby](https://www.ruby-lang.org)
 
-Ruby installation is still a buggy mess. These are the least complicated methods.
+Ruby installation is still a buggy mess. These are the least complicated methods for dealing with installing and managing versions that I've found.
 
 - [ruby-install](https://github.com/postmodern/ruby-install)
   - `brew install ruby-install`
@@ -72,6 +68,14 @@ Ruby installation is still a buggy mess. These are the least complicated methods
   - note: `bash/.langs` includes a line to load chruby and automatically switch to ruby-2.x (`chruby ruby-2`)
 - [bundler](http://gembundler.com)
   - `gem install bundler`
+
+### [homebrew](http://brew.sh)
+
+Homebrew can be problematic but it gives me access to a lot of packages I need to work with in a fairly easy to handle way. Install like so:
+
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 ## Mac OS X Prefs
 
