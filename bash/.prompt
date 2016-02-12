@@ -1,0 +1,5 @@
+S_COLOR=$PS_GREEN_BOLD
+if [ ${UID} -eq 0 ]; then
+    S_COLOR=$PS_RED_BOLD
+fi
+export PS1="🏠 ${PS_CYAN}\u@\h ${PS_GREEN}\w ${PS_RED}\$(parse_git_branch)${S_COLOR}$ ${PS_WHITE}"

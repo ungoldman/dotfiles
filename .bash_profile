@@ -1,8 +1,10 @@
 if [[ -n "$PS1" ]]; then
 
-  for file in ~/dotfiles/bash/.{colors,exports,aliases,functions,langs,bash_prompt,private}; do
+  dotfiles="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+  for file in ${dotfiles}/bash/.{colors,exports,aliases,functions,langs,prompt,private}; do
     [ -r "$file" ] && source "$file"
   done
-  unset file
+  unset file dotfiles
 
 fi

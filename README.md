@@ -1,128 +1,125 @@
-# dotfiles
+# ngoldman/dotfiles
 
-Some basic config for a mac dev machine.
+> Minimalist config for working in a terminal environment.
 
-This is not the best set of dotfiles. However, it is my set of dotfiles.
+![](https://49.media.tumblr.com/8037b4adc4528f816a87eab93bbb1805/tumblr_np8i3bXp5g1qzdg48o1_500.gif)
 
-Relies heavily on [homebrew](https://github.com/mxcl/homebrew).
+**These are my dotfiles. There are many like them, but these ones are mine.**
 
-Designed to be cloned into `~/dotfiles`, as in
+I work primarily on Mac OS X and Ubuntu with node.js these days so this setup is geared towards making those three work nicely together.
 
-```sh
-~ $ git clone git@github.com:ngoldman/dotfiles.git
-```
+## Install
 
-then included with the following line in your `.bash_profile`:
+1. Clone this repository, for example into `~/.dotfiles`.
 
 ```sh
-[ -f ~/dotfiles/.bash_profile ] && source ~/dotfiles/.bash_profile
+~ $ git clone git@github.com:ngoldman/dotfiles.git ~/.dotfiles
 ```
 
-`.bash_profile` also tries to source a `.gitignore`'d `bash/.private` file that's meant to include anything you don't want to check into version control.
+2. Source it with the following line in `.profile`, `.bashrc`, or `.bash_profile` depending on your machine's setup.
 
-## Dev Environment Install List
+```sh
+[ -f ~/.dotfiles/.bash_profile ] && source ~/.dotfiles/.bash_profile
+```
 
-### Global
+Note: `.bash_profile` also tries to source a `bash/.private` file (ignored by this repository's `.gitignore`) that's meant to include anything you don't want to check into version control.
 
-* [homebrew](https://github.com/mxcl/homebrew/wiki/installation)
-  * `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-* latest [git](http://git-scm.com)
-  * `brew install git`
-* [tig](http://jonas.nitro.dk/tig)
-  * `brew install tig`
+--
 
-### Command Line Tools (GCC)
+# Notes
 
-This is an ongoing issue with Apple. They seem to enjoy changing how these tools are installed at every major OS update. It is a huge pain the ass.
+## Things I often need to install
 
-:+1: **non-apple solution**: `brew tap homebrew/dupes`, then `brew install apple-gcc42`. Very quick, no registration. [Freedom](http://cdn.memegenerator.net/instances/400x/35280005.jpg)!
+### [node.js](http://nodejs.org)
 
-Apparently with Mavericks / Xcode 5.1, Command Line Tools are no longer available via Xcode and must either be installed via the [Apple Developer site](https://developer.apple.com/downloads/index.action?=command%20line%20tools), **OR** by running `xcode-select --install` in your terminal. More info [here](http://stackoverflow.com/questions/9329243/xcode-4-4-command-line-tools).
+For cleaner installs and multiple node versions, use [`nvm`](https://github.com/creationix/nvm). Be sure to use the latest version.
 
-### Node.js
+```
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
+```
 
-* [node](http://nodejs.org)
-  * `brew install node`
+After installing node, upgrade to latest `npm`:
+
+```
+npm i -g npm
+```
+
+If you don't want to use `nvm`...
+
+#### Mac
+
+Easiest is [homebrew](http://brew.sh): `brew install node`
+
+#### Ubuntu
+
+```
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+See https://github.com/nodesource/distributions#debinstall for more info on the above method (not easy to find).
 
 ### Ruby
 
-* [ruby-install](https://github.com/postmodern/ruby-install)
-  * `brew install ruby-install`
-* [chruby](https://github.com/postmodern/chruby)
-  * `brew install chruby`
-* latest ruby
-  * `ruby-install ruby` ([ref](https://github.com/postmodern/ruby-install#synopsis))
-  * note: `bash/.langs` includes a line to load chruby and automatically switch to ruby-2.x (`chruby ruby-2`)
-* [bundler](http://gembundler.com)
-  * `gem install bundler`
+Ruby installation is still a buggy mess. These are the least complicated methods.
 
-### Python
-
-* python
-  * `brew install python`
-
-### Databases
-
-* postgresql
-  * [Installing on Mountain Lion](https://coderwall.com/p/1mni7w)
-* redis
-  * `brew install redis`
-
-### Utilities
-
-* [rmtrash](http://www.nightproductions.net/cli.htm) if you're afraid of `rm`
-
+- [ruby-install](https://github.com/postmodern/ruby-install)
+  - `brew install ruby-install`
+- [chruby](https://github.com/postmodern/chruby)
+  - `brew install chruby`
+- latest ruby
+  - `ruby-install ruby` ([ref](https://github.com/postmodern/ruby-install#synopsis))
+  - note: `bash/.langs` includes a line to load chruby and automatically switch to ruby-2.x (`chruby ruby-2`)
+- [bundler](http://gembundler.com)
+  - `gem install bundler`
 
 ## Mac OS X Prefs
 
-* Show hidden files in Finder
+- Show hidden files in Finder
 
 ```
 $ defaults write com.apple.Finder AppleShowAllFiles YES
 $ killall Finder
 ```
 
-* Transparent dock icons for hidden applications
+- Transparent dock icons for hidden applications
 
 ```
 $ defaults write com.apple.Dock showhidden -bool YES
 $ killall Dock
 ```
 
-* SublimeText2 command line tool (make sure `~/bin` exists and is in your `PATH` first)
+- symlink `subl` to Sublime Text (make sure `~/bin` exists and is added to `PATH`)
 
 ```
-$ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+$ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 ```
 
-* use tabs in modal dialogs
+- use tabs in modal dialogs
 
 ```
 $ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 ```
 
-## Fave OS X Apps
+## handly terminal programs
 
-* [iTerm 2](http://www.iterm2.com/)
-* [Sublime Text 2](http://www.sublimetext.com/2)
-  * [Sublime Package Control](http://wbond.net/sublime_packages/package_control)
-    * [Emmet](https://github.com/sergeche/emmet-sublime)
-    * [GitGutter](https://github.com/jisaacks/GitGutter)
-    * [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter)
-* [Chrome Canary](https://tools.google.com/dlpage/chromesxs/)
-* [Firefox Nightly](http://nightly.mozilla.org/)
-  * [Firebug](http://getfirebug.com/)
-* [LimeChat](http://limechat.net/mac/)
-* [Adium](http://adium.im/)
-* [ShadowKiller](http://unsanity.com/haxies/shadowkiller/)
+### [htop](http://hisham.hm/htop/)
 
-## Tips
+Like `top` but much better.
 
-* Run `brew doctor`, `brew update`, and `brew upgrade` frequently
+Install with `sudo apt-get htop` or `brew install htop`. Run with `sudo` for better info.
 
-## Todo
+### [slap](https://github.com/slap-editor/slap)
 
-* create script to automate installation
-* investigate installing mac apps with homebrew!
-  * https://github.com/phinze/homebrew-cask
-  * https://github.com/mathiasbynens/dotfiles/blob/master/.brew
+Terminal text editor with full mouse support and sublime-like qualities. Sometimes buggy but much easier than dealing with vim or nano.
+
+```
+npm i -g slap
+```
+
+## nice-to-have OS X apps
+
+- [iTerm](https://www.iterm2.com/downloads.html)
+- [Sublime Text 3](https://www.sublimetext.com/3)
+  - [Sublime Package Control](http://wbond.net/sublime_packages/package_control)
+- [ShadowKiller](http://unsanity.com/haxies/shadowkiller/)

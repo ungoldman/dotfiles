@@ -4,7 +4,6 @@
 # default to ruby 2 if chruby is around
 command -v chruby >/dev/null 2>&1 && chruby ruby-2
 
-
 # python config
 export PYTHONPATH=\"$(brew --prefix)/lib/python2.7/site-packages:\$PYTHONPATH\"
 
