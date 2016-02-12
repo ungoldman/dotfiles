@@ -19,17 +19,17 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # export OS shorthand identifier
-if [ "$OSTYPE" = "linux-gnu" ]; then
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
   export OS='linux'
-elif [ "$OSTYPE" = "darwin"* ]; then
+elif [[ "$OSTYPE" == "darwin"* ]]; then
   export OS='osx'
-elif [ "$OSTYPE" = "cygwin" ]; then
+elif [[ "$OSTYPE" == "cygwin" ]]; then
   export OS='windows'
-elif [ "$OSTYPE" = "msys" ]; then
+elif [[ "$OSTYPE" == "msys" ]]; then
   export OS='windows'
-elif [ "$OSTYPE" = "win32" ]; then
+elif [[ "$OSTYPE" == "win32" ]]; then
   export OS='windows'
-elif [ "$OSTYPE" = "freebsd"* ]; then
+elif [[ "$OSTYPE" == "freebsd"* ]]; then
   export OS='bsd'
 else
   export OS='unknown'
