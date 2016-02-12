@@ -1,5 +1,14 @@
-S_COLOR=$PS_GREEN_BOLD
+dcolor=$PS_GREEN_BOLD
+client_loc="${PS_CYAN}🏠"
+
 if [ ${UID} -eq 0 ]; then
-    S_COLOR=$PS_RED_BOLD
+    dcolor=$PS_RED_BOLD
 fi
-export PS1="🏠 ${PS_CYAN}\u@\h ${PS_GREEN}\w ${PS_RED}\$(parse_git_branch)${S_COLOR}$ ${PS_WHITE}"
+
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+  client_loc="${PS_RED}☎"
+fi
+
+export PS1="${client_loc} \u@\h ${PS_GREEN}\w ${PS_RED}\$(parse_git_branch)${dcolor}$ ${PS_WHITE}"
+
+unset dcolor client_loc
