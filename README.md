@@ -6,7 +6,7 @@
 
 **These are my dotfiles. There are many like them, but these ones are mine.**
 
-These days I'm working primarily on a (very old) Macbook Pro and remote Ubuntu servers with node and ruby, so this setup is geared towards making those four play nice together.
+These days I'm working primarily on a (very old) Macbook Pro and remote Ubuntu servers with Node and Ruby, so this setup is geared towards making those four play nice together.
 
 ## Install
 
@@ -16,10 +16,12 @@ These days I'm working primarily on a (very old) Macbook Pro and remote Ubuntu s
 ~ $ git clone git@github.com:ngoldman/dotfiles.git ~/.dotfiles
 ```
 
-2. Source it with the following line in `.profile`, `.bashrc`, or `.bash_profile` depending on your machine's setup.
+2. Source it with the following line in `~/.bash_profile`, `~/.profile`, or `~/.bashrc` depending on your machine's setup.
 
 ```sh
-[ -f ~/.dotfiles/.bash_profile ] && source ~/.dotfiles/.bash_profile
+# include dotfiles
+DOTFILES="${HOME}/.dotfiles"
+[ -f ${DOTFILES}/.bash_profile ] && source ${DOTFILES}/.bash_profile
 ```
 
 Note: `.bash_profile` also tries to source a `bash/.private` file (ignored by this repository's `.gitignore`) that's meant to include anything you don't want to check into version control.

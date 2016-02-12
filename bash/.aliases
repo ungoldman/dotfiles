@@ -18,7 +18,7 @@ command -v hub >/dev/null 2>&1 && alias preq='hub pull-request'
 
 # prompt options
 alias rebash='source ~/.bash_profile'
-alias subash='subl ~/dotfiles'
+alias subash='subl $DOTFILES'
 
 # get alias halp
 alias halp='alias -p'
