@@ -30,6 +30,8 @@ DOTFILES="${HOME}/.dotfiles"
 
 Note: `.bash_profile` also tries to source a `bash/.private` file (ignored by this repository's `.gitignore`) that's meant to include anything you don't want to check into version control.
 
+You can run scripts in the `install` directory after this point, but be advised they should only be run once and may have adverse consequences if you don't read through them first.
+
 ## extra things I often need to install
 
 ### [node.js](http://nodejs.org)
