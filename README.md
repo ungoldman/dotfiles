@@ -102,32 +102,14 @@ Homebrew can be problematic (taking over a lot of `/usr/local`) but it gives me 
 
 ## osx prefs
 
-### show hidden files in Finder
-
-```
-$ defaults write com.apple.Finder AppleShowAllFiles YES
-$ killall Finder
-```
-
-### transparent dock icons for hidden applications
-
-```
-$ defaults write com.apple.Dock showhidden -bool YES
-$ killall Dock
-```
+Run `./install/osx.sh` (at your own risk) for the most leet OS X settings.
 
 ### symlink `subl` to sublime text
 
 `~/bin` is added to $PATH in `bash/.exports`.
 
 ```
-$ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
-```
-
-### use tabs in modal dialogs
-
-```
-$ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 ```
 
 ## handy terminal programs
