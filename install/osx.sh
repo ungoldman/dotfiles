@@ -364,6 +364,13 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 ###############################################################################
 
 echo ""
+echo "Hide desktop? (y/n)"
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+  defaults write com.apple.finder CreateDesktop -bool true
+fi
+
+echo ""
 echo "Show icons for hard drives, servers, and removable media on the desktop? (y/n)"
 read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
@@ -495,6 +502,10 @@ if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
 fi
 
 echo ""
+echo "Making hidden app Dock icons semi-transparent"
+defaults write com.apple.Dock showhidden -bool true
+
+echo ""
 echo "Setting the icon size of Dock items to 36 pixels for optimal size/screen-realestate"
 defaults write com.apple.dock tilesize -int 36
 
@@ -520,7 +531,7 @@ read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
   defaults write com.apple.dock autohide -bool true
   defaults write com.apple.dock autohide-delay -float 0
-  defaults write com.apple.dock autohide-time-modifier -float 0
+  defaults write com.apple.dock autohide-time-modifier -float 0.12
 fi
 
 
