@@ -12,7 +12,7 @@ My current setup:
 - server: digital ocean ubuntu 14.04
 - editor: [sublime text 3](https://www.sublimetext.com/3) (local), [slap](https://github.com/slap-editor/slap) (remote)
 
-## install
+## Install
 
 First, clone this repository, for example into `~/.dotfiles`.
 
@@ -32,7 +32,27 @@ Note: `.bash_profile` also tries to source a `bash/.private` file (ignored by th
 
 You can run scripts in the `install` directory after this point, but be advised they should only be run once and may have adverse consequences if you don't read through them first.
 
-## extra things I often need to install
+## Extras
+
+### [homebrew](http://brew.sh)
+
+Homebrew can be problematic (taking over a lot of `/usr/local`) but it gives me access to a lot of packages I need to work with in a fairly easy to handle way. Install like so:
+
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+## osx prefs
+
+Run `./install/osx.sh` (at your own risk) for the most leet OS X settings.
+
+### symlink `subl` to sublime text
+
+`~/bin` is added to $PATH in `bash/.exports`.
+
+```
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+```
 
 ### [node.js](http://nodejs.org)
 
@@ -80,39 +100,47 @@ See https://github.com/nodesource/distributions#debinstall for more info on the 
 
 ### [ruby](https://www.ruby-lang.org)
 
+#### mac
+
 Ruby installation can be messy. These are the least complicated methods for dealing with installing and managing versions that I've found.
 
-- [ruby-install](https://github.com/postmodern/ruby-install)
+- [ruby-install](https://github.com/postmodern/ruby-install) for installing rubies
   - `brew install ruby-install`
-- [chruby](https://github.com/postmodern/chruby)
+- [chruby](https://github.com/postmodern/chruby) for changing the ruby version
   - `brew install chruby`
-- latest ruby
-  - `ruby-install ruby` ([ref](https://github.com/postmodern/ruby-install#synopsis))
-  - note: `bash/.langs` includes a line to load chruby and automatically switch to ruby-2.x (`chruby ruby-2`)
-- [bundler](http://gembundler.com)
+  - note: `bash/.langs` includes a line to load chruby if it's present
+- [to install the latest ruby](https://github.com/postmodern/ruby-install#synopsis)
+  - `ruby-install ruby`
+- you'll probably need [bundler](http://gembundler.com)
   - `gem install bundler`
 
-### [homebrew](http://brew.sh)
+### [go](https://golang.org)
 
-Homebrew can be problematic (taking over a lot of `/usr/local`) but it gives me access to a lot of packages I need to work with in a fairly easy to handle way. Install like so:
-
-```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-## osx prefs
-
-Run `./install/osx.sh` (at your own risk) for the most leet OS X settings.
-
-### symlink `subl` to sublime text
-
-`~/bin` is added to $PATH in `bash/.exports`.
+#### mac
 
 ```
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+brew install go
 ```
 
-## handy terminal programs
+`bash/.langs` defaults to setting `GOPATH` to `~/dev/go`.
+
+### [redis](http://redis.io/)
+
+#### mac
+
+```
+brew install redis
+```
+
+```
+To have launchd start redis at login:
+  ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
+Then to load redis now:
+  launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
+Or, if you don't want/need launchctl, you can just run:
+  redis-server /usr/local/etc/redis.conf
+```
+
 
 ### [htop](http://hisham.hm/htop/)
 
@@ -128,9 +156,12 @@ Terminal text editor with full mouse support and sublime-like qualities. Sometim
 npm i -g slap
 ```
 
-## nice-to-have osx apps
+### OSX Apps
 
 - [iTerm](https://www.iterm2.com/downloads.html)
 - [Sublime Text 3](https://www.sublimetext.com/3)
   - [Sublime Package Control](http://wbond.net/sublime_packages/package_control)
+  - [Git Gutter](https://github.com/jisaacks/GitGutter)
+  - [Themr](https://github.com/benweier/Themr)
+  - [Schemr](https://github.com/benweier/Schemr)
 - [ShadowKiller](http://unsanity.com/haxies/shadowkiller/)
