@@ -5,11 +5,6 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 # git
 alias g='git'
-alias ga='git add'
-alias gc='git commit -m'
-alias gd='git diff'
-alias gs='git status'
-alias gw='git diff --word-diff'
 
 # alias hub to git
 command -v hub >/dev/null 2>&1 && eval "$(hub alias -s)"
