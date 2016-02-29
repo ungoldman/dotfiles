@@ -42,7 +42,7 @@ Homebrew can be problematic (taking over a lot of `/usr/local`) but it gives me 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-## osx prefs
+### osx prefs
 
 Run `./install/osx.sh` (at your own risk) for the most leet OS X settings.
 
