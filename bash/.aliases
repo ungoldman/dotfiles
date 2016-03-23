@@ -5,6 +5,10 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 # git
 alias g='git'
+alias ga='git add'
+alias gc='git commit'
+alias gca='git commit --amend'
+alias gcm='git commit -m'
 
 # alias hub to git
 command -v hub >/dev/null 2>&1 && eval "$(hub alias -s)"
@@ -14,6 +18,7 @@ command -v hub >/dev/null 2>&1 && alias preq='hub pull-request'
 # prompt options
 alias rebash='source ~/.bash_profile'
 alias subash='subl $DOTFILES'
+alias simple_prompt='export PS1="${PS_GREEN}\w ${PS_GREEN_BOLD}$ ${PS_WHITE}"'
 
 # get alias halp
 alias halp='alias -p'
