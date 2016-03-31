@@ -1,3 +1,6 @@
+# edit
+alias edit='subl .'
+
 # utils
 alias l='ls -FlaG'
 alias grep='grep --color=auto'
@@ -18,7 +21,7 @@ command -v hub >/dev/null 2>&1 && alias preq='hub pull-request'
 # prompt options
 alias rebash='source ~/.bash_profile'
 alias subash='subl $DOTFILES'
-alias simple_prompt='export PS1="${PS_GREEN}\w ${PS_GREEN_BOLD}$ ${PS_WHITE}"'
+alias simpler='export PS1="${PS_GREEN}\w ${PS_GREEN_BOLD}$ ${PS_WHITE}"'
 
 # get alias halp
 alias halp='alias -p'
