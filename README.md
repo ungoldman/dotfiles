@@ -124,6 +124,23 @@ brew install go
 
 `bash/.langs` defaults to setting `GOPATH` to `~/dev/go`.
 
+### [postgres](http://www.postgresql.org/)
+
+#### mac
+
+```
+brew install postgres
+```
+
+```
+To have launchd start postgresql at login:
+  ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+Then to load postgresql now:
+  launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+Or, if you don't want/need launchctl, you can just run:
+  postgres -D /usr/local/var/postgres
+```
+
 ### [redis](http://redis.io/)
 
 #### mac
@@ -140,7 +157,6 @@ Then to load redis now:
 Or, if you don't want/need launchctl, you can just run:
   redis-server /usr/local/etc/redis.conf
 ```
-
 
 ### [htop](http://hisham.hm/htop/)
 
