@@ -1,9 +1,15 @@
 {
   "color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
   "draw_white_space": "all",
+  "enable_tab_scrolling": false,
   "ensure_newline_at_eof_on_save": true,
+  "fade_fold_buttons": false,
   "font_size": 13.0,
   "highlight_modified_tabs": true,
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
   "jshint_options":
   {
     "browser": true,
@@ -29,6 +35,5 @@
   "trim_trailing_white_space_on_save": true,
   "use_simple_full_screen": true,
   "word_wrap": true,
-  "fade_fold_buttons": false,
   "wrap_width": 100
 }
