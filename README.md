@@ -1,4 +1,4 @@
-# ngoldman/dotfiles
+# ungoldman/dotfiles
 
 > Minimalist config for working in a terminal environment.
 
@@ -10,14 +10,14 @@ My current setup:
 
 - laptop: early 2011 macbook pro 13"
 - server: digital ocean ubuntu 14.04
-- editor: [sublime text 3](https://www.sublimetext.com/3) (local), [slap](https://github.com/slap-editor/slap) (remote)
+- editor: [sublime text 3](https://www.sublimetext.com/3)
 
 ## Install
 
 First, clone this repository, for example into `~/.dotfiles`.
 
 ```sh
-~ $ git clone git@github.com:ngoldman/dotfiles.git ~/.dotfiles
+~ $ git clone git@github.com:ungoldman/dotfiles.git ~/.dotfiles
 ```
 
 Next you'll need to include following lines in `~/.bash_profile`, `~/.profile`, or `~/.bashrc` depending on your machine's setup. Make sure `$DOTFILES` matches the full path to the directory you cloned this repository into.
