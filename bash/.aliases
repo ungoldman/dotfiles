@@ -1,5 +1,5 @@
 # edit
-alias edit='subl .'
+alias edit='atom .'
 
 # utils
 alias l='ls -FlaG'
@@ -20,7 +20,7 @@ command -v hub >/dev/null 2>&1 && alias preq='hub pull-request'
 
 # prompt options
 alias rebash='source ~/.bash_profile'
-alias subash='subl $DOTFILES'
+alias subash='atom $DOTFILES'
 alias simpler='export PS1="${PS_GREEN}\w ${PS_GREEN_BOLD}$ ${PS_WHITE}"'
 
 # get alias halp

@@ -10,7 +10,7 @@ My current setup:
 
 - laptop: early 2011 macbook pro 13"
 - server: digital ocean ubuntu 14.04
-- editor: [sublime text 3](https://www.sublimetext.com/3)
+- editor: [atom](https://atom.io/)
 
 ## Install
 
@@ -45,14 +45,6 @@ Homebrew can be problematic (taking over a lot of `/usr/local`) but it gives me 
 ### osx prefs
 
 Run `./install/osx.sh` (at your own risk) for the most leet OS X settings.
-
-### symlink `subl` to sublime text
-
-`~/bin` is added to $PATH in `bash/.exports`.
-
-```
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
-```
 
 ### [node.js](http://nodejs.org)
 
@@ -175,7 +167,7 @@ npm i -g slap
 ### OSX Apps
 
 - [iTerm](https://www.iterm2.com/downloads.html)
-- [Sublime Text 3](https://www.sublimetext.com/3)
+- [Atom](https://atom.io/)
   - [Sublime Package Control](http://wbond.net/sublime_packages/package_control)
   - [Git Gutter](https://github.com/jisaacks/GitGutter)
   - [Themr](https://github.com/benweier/Themr)
