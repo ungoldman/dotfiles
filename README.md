@@ -13,13 +13,13 @@ My current setup:
 
 ## Install
 
-First, clone this repository, for example into `~/.dotfiles`.
+1. Clone this repository, for example into `~/.dotfiles`.
 
 ```sh
 ~ $ git clone git@github.com:ungoldman/dotfiles.git ~/.dotfiles
 ```
 
-Next you'll need to include following lines in `~/.bash_profile`, `~/.profile`, or `~/.bashrc` depending on your machine's setup. Make sure `$DOTFILES` matches the full path to the directory you cloned this repository into.
+2. Include following lines in `~/.bash_profile`, `~/.profile`, or `~/.bashrc` depending on your machine's setup. Make sure `$DOTFILES` matches the full path to the directory you cloned this repository into.
 
 ```sh
 # include dotfiles
@@ -27,7 +27,15 @@ DOTFILES="${HOME}/.dotfiles"
 [ -f ${DOTFILES}/.bash_profile ] && source ${DOTFILES}/.bash_profile
 ```
 
-Note: `.bash_profile` also tries to source a `bash/.private` file (ignored by this repository's `.gitignore`) that's meant to include anything you don't want to check into version control.
+3. Start a new terminal session. If everything went well, bash environment is ready to go.
+
+### Notes
+
+#### Private environment variables
+
+The `.bash_profile` file at the root of this repo will attempt to source a `bash/.private` file (ignored by this repository's `.gitignore`) that's meant to include anything you don't want to check into version control.
+
+#### More scripts
 
 You can run scripts in the `install` directory after this point, but be advised they should only be run once and may have adverse consequences if you don't read through them first.
 
@@ -35,22 +43,30 @@ You can run scripts in the `install` directory after this point, but be advised 
 
 ### [homebrew](http://brew.sh)
 
-Homebrew can be problematic (taking over a lot of `/usr/local`) but it gives me access to a lot of packages I need to work with in a fairly easy to handle way. Install like so:
+Homebrew enables access to a lot of useful packages in a fairly easy to handle way (it's like `apt-get` for macOS). Install like so:
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-### osx prefs
+Note that Homebrew can sometimes be problematic as it puts a lot of files in `/usr/local`.
 
-Run `./install/osx.sh` (at your own risk) for the most leet OS X settings.
+### macOS prefs
+
+Run `./install/mac.sh` (at your own risk) for the most leet macOS settings.
 
 ### [node.js](http://nodejs.org)
 
-For cleaner installs and multiple node versions, use [`nvm`](https://github.com/creationix/nvm). Be sure to use the latest version.
+For cleaner installs and multiple node versions, use [`nvm`](https://github.com/creationix/nvm). Be sure to use the latest version:
 
 ```
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
+```
+
+Then install node:
+
+```
+nvm i lts
 ```
 
 After installing node, upgrade to latest `npm`:
@@ -64,30 +80,6 @@ Keep node modules out of `/usr/local`.
 ```
 npm set prefix ~/.local/share/npm
 ```
-
-If you don't want to use `nvm`...
-
-#### mac
-
-Easiest is `brew install node` or the [installer](https://nodejs.org/en/download/).
-
-#### ubuntu
-
-For 4.x:
-
-```
-curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
-sudo apt-get install -y nodejs
-```
-
-For 5.x:
-
-```
-curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
-sudo apt-get install -y nodejs
-```
-
-See https://github.com/nodesource/distributions#debinstall for more info on the above method (not easy to find).
 
 ### [ruby](https://www.ruby-lang.org)
 
@@ -163,7 +155,7 @@ Terminal text editor with full mouse support and sublime-like qualities. Sometim
 npm i -g slap
 ```
 
-### OSX Apps
+### macOS Apps
 
 - [Chrome](https://www.google.com/chrome/) - still the best browser app
 - [iTerm](https://www.iterm2.com/downloads.html) - best terminal app
