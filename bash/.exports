@@ -3,7 +3,7 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# Add local node_modules to path
+# Add local node_modules bin directory to path
 export PATH=$PATH:./node_modules/.bin
 
 # make sure brew paths precede /usr/bin
