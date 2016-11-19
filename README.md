@@ -8,9 +8,8 @@
 
 My current setup:
 
-- laptop: early 2011 macbook pro 13"
+- laptop: early 2015 macbook pro 13"
 - server: digital ocean ubuntu 14.04
-- editor: [atom](https://atom.io/)
 
 ## Install
 
