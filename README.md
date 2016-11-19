@@ -166,10 +166,6 @@ npm i -g slap
 
 ### OSX Apps
 
-- [iTerm](https://www.iterm2.com/downloads.html)
-- [Atom](https://atom.io/)
-  - [Sublime Package Control](http://wbond.net/sublime_packages/package_control)
-  - [Git Gutter](https://github.com/jisaacks/GitGutter)
-  - [Themr](https://github.com/benweier/Themr)
-  - [Schemr](https://github.com/benweier/Schemr)
-- [ShadowKiller](http://unsanity.com/haxies/shadowkiller/)
+- [Chrome](https://www.google.com/chrome/) - still the best browser app
+- [iTerm](https://www.iterm2.com/downloads.html) - best terminal app
+- [Atom](https://atom.io) - slower than [Sublime Text 3](https://www.sublimetext.com/3) but better package ecosystem
