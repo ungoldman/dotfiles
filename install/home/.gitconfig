@@ -3,7 +3,8 @@
 [alias]
   a = add
   b = branch
-  c = commit -m
+  c = commit
+  cm = commit -m
   d = diff
   dw = diff --word-diff
   ds = diff --staged
@@ -17,6 +18,7 @@
   done = branch --merged
   todo = branch --no-merged
   update = fetch --all --prune
+  lastchange = log -p --follow -n 1
 [credential]
   helper = osxkeychain
 [mergetool]
@@ -25,4 +27,6 @@
   excludesfile = ~/.gitignore_global
   autocrlf = input
   ignorecase = false
-  editor = subl -nw
+  editor = atom -nw
+[push]
+  default = simple
