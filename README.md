@@ -60,7 +60,7 @@ Run `./install/mac.sh` (at your own risk) for the most leet macOS settings.
 For cleaner installs and multiple node versions, use [`nvm`](https://github.com/creationix/nvm). Be sure to use the latest version:
 
 ```
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
 ```
 
 Then install node:
