@@ -55,6 +55,8 @@ Note that Homebrew can sometimes be problematic as it puts a lot of files in `/u
 
 Run `./install/mac.sh` (at your own risk) for the most leet macOS settings.
 
+## Languages
+
 ### [node.js](http://nodejs.org)
 
 For cleaner installs and multiple node versions, use [`nvm`](https://github.com/creationix/nvm). Be sure to use the latest version:
@@ -107,6 +109,8 @@ brew install go
 
 `bash/.langs` defaults to setting `GOPATH` to `~/dev/go`.
 
+## Databases
+
 ### [postgres](http://www.postgresql.org/)
 
 #### mac
@@ -140,6 +144,8 @@ Then to load redis now:
 Or, if you don't want/need launchctl, you can just run:
   redis-server /usr/local/etc/redis.conf
 ```
+
+## Terminal Programs
 
 ### [htop](http://hisham.hm/htop/)
 
