@@ -163,8 +163,9 @@ npm i -g slap
 
 ### macOS Apps
 
-- [Chrome](https://www.google.com/chrome/) - still the best browser app
-- [iTerm](https://www.iterm2.com/downloads.html) - best terminal app
-- [Atom](https://atom.io) - pretty good text editor - slower than [ST3](https://www.sublimetext.com/3), more hackable, better package ecosystem
-- [Flux](https://justgetflux.com/) - great menubar app that adjusts screen color temperature based on time of day
+- [Chrome](https://www.google.com/chrome/) - still the best browser
+- [iTerm](https://www.iterm2.com/downloads.html) - terminal emulator
+- [Atom](https://atom.io) - pretty good FOSS text editor
+- [Flux](https://justgetflux.com/) - menubar app that adjusts screen color temperature based on time of day
 - [Caffeine](http://lightheadsw.com/caffeine/) - menubar app to prevent screensaver/sleep when needed
+- [VLC](http://www.videolan.org/vlc/download-macosx.html) - video player
