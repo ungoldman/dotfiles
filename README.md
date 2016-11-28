@@ -174,7 +174,6 @@ npm i -g slap
 
 - [Flux](https://justgetflux.com/) - menubar dynamic screen color adjuster (good for eyes & sleep)
 - [Caffeine](http://lightheadsw.com/caffeine/) - menubar screensaver/sleep disabler
-- [Gitify](http://gitify.io/) - menubar github notifier
 - [Cumulus](https://github.com/gillesdemey/Cumulus) - menubar soundcloud client
 
 #### Nice to have
