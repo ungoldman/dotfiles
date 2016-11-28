@@ -169,3 +169,4 @@ npm i -g slap
 - [Flux](https://justgetflux.com/) - menubar app that adjusts screen color temperature based on time of day
 - [Caffeine](http://lightheadsw.com/caffeine/) - menubar app to prevent screensaver/sleep when needed
 - [VLC](http://www.videolan.org/vlc/download-macosx.html) - video player
+- [WebTorrent](https://webtorrent.io/desktop/) - free open source streaming torrent client
