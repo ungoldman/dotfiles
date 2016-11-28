@@ -163,10 +163,21 @@ npm i -g slap
 
 ### macOS Apps
 
+#### Essentials
+
 - [Chrome](https://www.google.com/chrome/) - still the best browser
 - [iTerm](https://www.iterm2.com/downloads.html) - terminal emulator
 - [Atom](https://atom.io) - pretty good FOSS text editor
-- [Flux](https://justgetflux.com/) - menubar app that adjusts screen color temperature based on time of day
-- [Caffeine](http://lightheadsw.com/caffeine/) - menubar app to prevent screensaver/sleep when needed
 - [VLC](http://www.videolan.org/vlc/download-macosx.html) - video player
-- [WebTorrent](https://webtorrent.io/desktop/) - free open source streaming torrent client
+
+#### Menubar
+
+- [Flux](https://justgetflux.com/) - menubar dynamic screen color adjuster (good for eyes & sleep)
+- [Caffeine](http://lightheadsw.com/caffeine/) - menubar screensaver/sleep disabler
+- [Gitify](http://gitify.io/) - menubar github notifier
+- [Cumulus](https://github.com/gillesdemey/Cumulus) - menubar soundcloud client
+
+#### Nice to have
+
+- [WebTorrent](https://webtorrent.io/desktop/) - streaming torrent client
+- [Space Radar](https://github.com/zz85/space-radar) - disk space visualizer
