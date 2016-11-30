@@ -51,6 +51,13 @@ Homebrew enables access to a lot of useful packages in a fairly easy to handle w
 
 Note that Homebrew can sometimes be problematic as it puts a lot of files in `/usr/local`.
 
+To use the `Brewfile` in the root of this repo, you need [`homebrew-bundle`](https://github.com/Homebrew/homebrew-bundle).
+
+```
+brew tap Homebrew/bundle
+cd $DOTFILES && brew bundle
+```
+
 ### macOS prefs
 
 Run `./install/mac.sh` (at your own risk) for the most leet macOS settings.
