@@ -14,6 +14,7 @@ cask 'atom-beta'
 cask 'google-chrome'
 cask 'iterm2-beta'
 cask 'slack-beta'
+cask 'spaceradar'
 cask 'steam'
 mas 'iMovie', id: 408981434
 mas 'Keynote', id: 409183694
