@@ -2,7 +2,7 @@
 alias edit='atom .'
 
 # utils
-alias l='ls -FlaG'
+alias l='ls -FlAG'
 alias grep='grep --color=auto'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
