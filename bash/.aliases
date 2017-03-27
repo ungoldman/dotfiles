@@ -1,5 +1,5 @@
 # edit
-alias edit='atom .'
+alias edit='atom'
 
 # utils
 alias l='ls -FlAG'
