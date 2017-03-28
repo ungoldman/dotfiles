@@ -44,7 +44,8 @@ function toggle_screenshot_shadow {
   fi
 }
 
-function cycle_network_setup {
-  networksetup -setairportpower en0 off
-  networksetup -setairportpower en0 on
-}
+# don't do this, might make things crash if you do one after the other right away
+# function cycle_network_setup {
+#   networksetup -setairportpower en0 off
+#   networksetup -setairportpower en0 on
+# }

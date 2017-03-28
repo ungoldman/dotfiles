@@ -34,7 +34,3 @@ elif [[ "$OSTYPE" == "freebsd"* ]]; then
 else
   export OS='unknown'
 fi
-
-# keep global node modules out of /usr/local
-# npm set prefix ~/.local/share/npm/
-export PATH="$PATH:$HOME/.local/share/npm/bin"
