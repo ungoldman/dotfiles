@@ -19,7 +19,7 @@ My current setup:
     ~ $ git clone git@github.com:ungoldman/dotfiles.git
     ```
 
-2. run the `./init.sh` script at the root of this repository. This will add the following to your `~/.bash_profile` (`DIR` resolves to the `dotfiles` repository directory in the script):
+2. run the `./init.sh` script at the root of this repository. This will add the following to your `~/.bash_profile` (`DIR` resolves to the local `dotfiles` directory in the script):
 
     ```
     # include dotfiles
@@ -27,19 +27,7 @@ My current setup:
     [ -f \${DOTFILES}/.bash_profile ] && source \${DOTFILES}/.bash_profile
     ```
 
-3. Start a new terminal session. If everything went well, bash environment is ready to go.
-
-### Notes
-
-#### Private environment variables
-
-The `.bash_profile` file at the root of this repo will attempt to source a `bash/.private` file (ignored by this repository's `.gitignore`) that's meant to include anything you don't want to check into version control.
-
-#### More scripts
-
-You can run scripts in the `install` directory after this point, but be advised they should only be run once and may have adverse consequences if you don't read through them first.
-
-## Extras
+3. Start a new terminal session. If everything went well, your bash environment is ready to go.
 
 ### [homebrew](http://brew.sh)
 
@@ -58,24 +46,21 @@ brew tap Homebrew/bundle
 cd $DOTFILES && brew bundle
 ```
 
-### macOS prefs
+### Languages
 
-Run `./install/mac.sh` (at your own risk) for the most leet macOS settings.
+#### [node.js](http://nodejs.org)
 
-## Languages
-
-### [node.js](http://nodejs.org)
-
-For cleaner installs and multiple node versions, use [`nvm`](https://github.com/creationix/nvm). Be sure to use the latest version:
+Use [`nvm`](https://github.com/creationix/nvm) to manage node versions. Be sure to use the latest version:
 
 ```
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
 ```
 
 Then install node:
 
 ```
 nvm i lts
+nvm alias default lts
 ```
 
 After installing node, upgrade to latest `npm`:
@@ -84,43 +69,30 @@ After installing node, upgrade to latest `npm`:
 npm i -g npm
 ```
 
-Keep node modules out of `/usr/local`.
+Here are some node modules I like to install globally:
 
 ```
-npm set prefix ~/.local/share/npm
+fixpack
+gh-release
+init-module
+module-init
 ```
 
-### [ruby](https://www.ruby-lang.org)
+#### [ruby](https://www.ruby-lang.org)
 
-#### mac
+The `Brewfile` will instal [ruby-install](https://github.com/postmodern/ruby-install) and [chruby](https://github.com/postmodern/chruby), which are nice simple tools for managing ruby versions.
 
-Ruby installation can be messy. These are the least complicated methods for dealing with installing and managing versions that I've found.
+- `bash/.langs` includes a line to load chruby and switch to ruby v2 if it's present
+- [to install the latest ruby](https://github.com/postmodern/ruby-install#synopsis): `ruby-install ruby`
+- you'll probably need [bundler](http://gembundler.com): `gem install bundler`
 
-- [ruby-install](https://github.com/postmodern/ruby-install) for installing rubies
-  - `brew install ruby-install`
-- [chruby](https://github.com/postmodern/chruby) for changing the ruby version
-  - `brew install chruby`
-  - note: `bash/.langs` includes a line to load chruby if it's present
-- [to install the latest ruby](https://github.com/postmodern/ruby-install#synopsis)
-  - `ruby-install ruby`
-- you'll probably need [bundler](http://gembundler.com)
-  - `gem install bundler`
-
-### [go](https://golang.org)
-
-#### mac
-
-```
-brew install go
-```
+#### [go](https://golang.org)
 
 `bash/.langs` defaults to setting `GOPATH` to `~/dev/go`.
 
-## Databases
+### Databases
 
-### [postgres](http://www.postgresql.org/)
-
-#### mac
+#### [postgres](http://www.postgresql.org/)
 
 ```
 brew install postgres
@@ -135,9 +107,7 @@ Or, if you don't want/need launchctl, you can just run:
   postgres -D /usr/local/var/postgres
 ```
 
-### [redis](http://redis.io/)
-
-#### mac
+#### [redis](http://redis.io/)
 
 ```
 brew install redis
@@ -152,38 +122,14 @@ Or, if you don't want/need launchctl, you can just run:
   redis-server /usr/local/etc/redis.conf
 ```
 
-## Terminal Programs
+### macOS prefs
 
-### [htop](http://hisham.hm/htop/)
+Run `./install/mac.sh` (at your own risk) for the most l33t macOS settings.
 
-Like `top` but much better.
+### Private environment variables
 
-Install with `sudo apt-get htop` or `brew install htop`. Run with `sudo` for better info.
+The `.bash_profile` file at the root of this repo will attempt to source a `bash/.private` file (ignored by this repository's `.gitignore`) that's meant to include anything you don't want to check into version control.
 
-### [slap](https://github.com/slap-editor/slap)
+### More install scripts
 
-Terminal text editor with full mouse support and sublime-like qualities. Sometimes buggy but much easier than dealing with vim or nano.
-
-```
-npm i -g slap
-```
-
-### macOS Apps
-
-#### Essentials
-
-- [Chrome](https://www.google.com/chrome/) - still the best browser
-- [iTerm](https://www.iterm2.com/downloads.html) - terminal emulator
-- [Atom](https://atom.io) - pretty good FOSS text editor
-- [VLC](http://www.videolan.org/vlc/download-macosx.html) - video player
-
-#### Menubar
-
-- [Flux](https://justgetflux.com/) - menubar dynamic screen color adjuster (good for eyes & sleep)
-- [Caffeine](http://lightheadsw.com/caffeine/) - menubar screensaver/sleep disabler
-- [Cumulus](https://github.com/gillesdemey/Cumulus) - menubar soundcloud client
-
-#### Nice to have
-
-- [WebTorrent](https://webtorrent.io/desktop/) - streaming torrent client
-- [Space Radar](https://github.com/zz85/space-radar) - disk space visualizer
+You can run scripts in the `install` directory, but be advised they should only be run once and may have unwanted effects if you don't read through them first.
