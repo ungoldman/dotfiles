@@ -13,19 +13,19 @@ My current setup:
 
 ## Install
 
-1. Clone this repository, for example into `~/.dotfiles`.
+1. Clone this repository to a nice safe place. I tend to keep all my git-related work in `~/dev/git`.
 
-```sh
-~ $ git clone git@github.com:ungoldman/dotfiles.git ~/.dotfiles
-```
+    ```sh
+    ~ $ git clone git@github.com:ungoldman/dotfiles.git
+    ```
 
-2. Include following lines in `~/.bash_profile`, `~/.profile`, or `~/.bashrc` depending on your machine's setup. Make sure `$DOTFILES` matches the full path to the directory you cloned this repository into.
+2. run the `./init.sh` script at the root of this repository. This will add the following to your `~/.bash_profile` (`DIR` resolves to the `dotfiles` repository directory in the script):
 
-```sh
-# include dotfiles
-DOTFILES="${HOME}/.dotfiles"
-[ -f ${DOTFILES}/.bash_profile ] && source ${DOTFILES}/.bash_profile
-```
+    ```
+    # include dotfiles
+    export DOTFILES="${DIR}"
+    [ -f \${DOTFILES}/.bash_profile ] && source \${DOTFILES}/.bash_profile
+    ```
 
 3. Start a new terminal session. If everything went well, bash environment is ready to go.
 
