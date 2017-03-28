@@ -80,15 +80,15 @@ module-init
 
 #### [ruby](https://www.ruby-lang.org)
 
-The `Brewfile` will instal [ruby-install](https://github.com/postmodern/ruby-install) and [chruby](https://github.com/postmodern/chruby), which are nice simple tools for managing ruby versions.
-
+- `brew bundle` installs [ruby-install](https://github.com/postmodern/ruby-install) and [chruby](https://github.com/postmodern/chruby), which are nice simple tools for managing ruby versions.
 - `bash/.langs` includes a line to load chruby and switch to ruby v2 if it's present
 - [to install the latest ruby](https://github.com/postmodern/ruby-install#synopsis): `ruby-install ruby`
 - you'll probably need [bundler](http://gembundler.com): `gem install bundler`
 
 #### [go](https://golang.org)
 
-`bash/.langs` defaults to setting `GOPATH` to `~/dev/go`.
+- `brew bundle` installs latest `go`.
+- `bash/.langs` defaults to setting `GOPATH` to `~/dev/go`.
 
 ### Databases
 
