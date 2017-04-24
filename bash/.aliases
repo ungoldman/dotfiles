@@ -12,6 +12,8 @@ alias ga='git add'
 alias gc='git commit'
 alias gca='git commit --amend'
 alias gcm='git commit -m'
+alias gd='git diff'
+alias gds='git diff --staged'
 
 # alias hub to git
 command -v hub >/dev/null 2>&1 && eval "$(hub alias -s)"
