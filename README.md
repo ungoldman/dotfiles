@@ -9,7 +9,7 @@
 My current setup:
 
 - laptop: early 2015 macbook pro 13"
-- server: digital ocean ubuntu 14.04
+- server: digital ocean ubuntu 16.04
 
 ## Install
 
