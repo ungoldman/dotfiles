@@ -133,3 +133,7 @@ The `.bash_profile` file at the root of this repo will attempt to source a `bash
 ### More install scripts
 
 You can run scripts in the `install` directory, but be advised they should only be run once and may have unwanted effects if you don't read through them first.
+
+## License
+
+[ISC](LICENSE.md)
