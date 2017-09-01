@@ -29,7 +29,10 @@ alias simpler='export PS1="${PS_GREEN}\w ${PS_GREEN_BOLD}$ ${PS_WHITE}"'
 alias halp='alias -p'
 
 # get git alias halp
-alias galp='git config --get-regexp alias'
+alias galp='git config --get-regexp '^alias.' | sed s/^alias.//'
+
+# coffee time
+alias npmi='rm -rf node_modules && npm i'
 
 # internet
 alias browse='open -a "/Applications/Google Chrome.app" --args --ignore-gpu-blacklist'
