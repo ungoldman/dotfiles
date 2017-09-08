@@ -1,0 +1,45 @@
+#!/bin/sh
+#
+#    00-header - fancy MOTD header
+
+[ -r /etc/lsb-release ] && . /etc/lsb-release
+
+if [ -z "$DISTRIB_DESCRIPTION" ] && [ -x /usr/bin/lsb_release ]; then
+  # Fall back to using the very slow lsb_release utility
+  DISTRIB_DESCRIPTION=$(lsb_release -s -d)
+fi
+
+UPTIME_DAYS=$(expr `cat /proc/uptime | cut -d '.' -f1` % 31556926 / 86400)
+UPTIME_HOURS=$(expr `cat /proc/uptime | cut -d '.' -f1` % 31556926 % 86400 / 3600)
+UPTIME_MINUTES=$(expr `cat /proc/uptime | cut -d '.' -f1` % 31556926 % 86400 % 3600 / 60)
+
+R=`echo "\033[1;31m"`
+G=`echo "\033[1;32m"`
+N=`echo "\033[0m"`
+
+cat << EOF
+${R}
+██╗   ██╗   █████╗    ██╗        ██╗   ███████╗
+██║   ██║  ██╔══██╗   ██║        ██║   ██╔════╝
+██║   ██║  ███████║   ██║        ██║   ███████╗
+╚██╗ ██╔╝  ██╔══██║   ██║        ██║   ╚════██║
+ ╚████╔╝██╗██║  ██║██╗███████╗██╗██║██╗███████║██╗
+  ╚═══╝ ╚═╝╚═╝  ╚═╝╚═╝╚══════╝╚═╝╚═╝╚═╝╚══════╝╚═╝
+
+${N}hostname:     ${G}`hostname`
+${N}user:         ${G}`whoami`
+
+${N}ip:           ${G}`ifconfig eth0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'`
+${N}uptime:       ${G}$UPTIME_DAYS days, $UPTIME_HOURS hours, $UPTIME_MINUTES minutes
+
+${N}cpu:         ${G}`cat /proc/cpuinfo | grep 'model name' | head -1 | cut -d':' -f2`
+${N}os:           ${G}$DISTRIB_DESCRIPTION `uname -o` `uname -r` `uname -m`
+
+${N}cpu load:     ${G}`cat /proc/loadavg | awk '{print $1 ", " $2 ", " $3}'`
+${N}free memory:  ${G}`free -m | head -n 2 | tail -n 1 | awk {'print $4'}`M / ${G}`free -m | head -n 2 | tail -n 1 | awk {'print $2'}`M
+${N}free swap:    ${G}`free -m | tail -n 1 | awk {'print $4'}`M / ${G}`free -m | tail -n 1 | awk {'print $2'}`M
+${N}free disk:    ${G}`df -h / | awk '{ a = $2 } END { print a }'` / ${G}`df -h / | awk '{ a = $2 } END { print a }'`
+
+`command -v dokku >/dev/null 2>&1 && dokku ls`${N}
+
+EOF
