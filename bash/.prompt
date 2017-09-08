@@ -2,7 +2,7 @@ dcolor=$PS_GREEN_BOLD
 remote=""
 
 if [ ${UID} -eq 0 ]; then
-    dcolor=$PS_RED_BOLD
+  dcolor=$PS_RED_BOLD
 fi
 
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
