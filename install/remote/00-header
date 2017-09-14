@@ -38,7 +38,7 @@ ${N}os:           ${G}$DISTRIB_DESCRIPTION `uname -o` `uname -r` `uname -m`
 ${N}cpu load:     ${G}`cat /proc/loadavg | awk '{print $1 ", " $2 ", " $3}'`
 ${N}free memory:  ${G}`free -m | head -n 2 | tail -n 1 | awk {'print $4'}`M / ${G}`free -m | head -n 2 | tail -n 1 | awk {'print $2'}`M
 ${N}free swap:    ${G}`free -m | tail -n 1 | awk {'print $4'}`M / ${G}`free -m | tail -n 1 | awk {'print $2'}`M
-${N}free disk:    ${G}`df -h / | awk '{ a = $2 } END { print a }'` / ${G}`df -h / | awk '{ a = $2 } END { print a }'`
+${N}free disk:    ${G}`df -h / | awk '{ a = $4 } END { print a }'` / ${G}`df -h / | awk '{ a = $2 } END { print a }'`
 
 `command -v dokku >/dev/null 2>&1 && dokku ls`${N}
 
