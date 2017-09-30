@@ -61,21 +61,6 @@ nvm i lts
 nvm alias default lts
 ```
 
-After installing node, upgrade to latest `npm`:
-
-```
-npm i -g npm
-```
-
-Here are some node modules I like to install globally:
-
-```
-fixpack
-gh-release
-init-module
-module-init
-```
-
 #### [ruby](https://www.ruby-lang.org)
 
 - `brew bundle` installs [ruby-install](https://github.com/postmodern/ruby-install) and [chruby](https://github.com/postmodern/chruby), which are nice simple tools for managing ruby versions.
