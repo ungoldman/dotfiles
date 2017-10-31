@@ -43,5 +43,8 @@ alias findrouter='netstat -nr | grep default'
 # serve a directory
 alias serve='python -m SimpleHTTPServer 8000'
 
+# flush dns
+alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache'
+
 # docker
 command -v docker-machine >/dev/null 2>&1 && alias dockerenv='eval "$(docker-machine env dev)"'
