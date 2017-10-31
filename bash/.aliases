@@ -32,7 +32,9 @@ alias halp='alias -p'
 alias galp='git config --get-regexp '^alias.' | sed s/^alias.//'
 
 # coffee time
-alias npmi='rm -rf node_modules && npm i'
+alias ni='rm -rf node_modules && npm i'
+alias nis='rm -rf node_modules && npm i && npm start'
+alias nit='rm -rf node_modules && npm i && npm t'
 
 # internet
 alias browse='open -a "/Applications/Google Chrome.app" --args --ignore-gpu-blacklist'
