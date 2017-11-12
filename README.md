@@ -51,14 +51,14 @@ cd $DOTFILES && brew bundle
 Use [`nvm`](https://github.com/creationix/nvm) to manage node versions. Be sure to use the latest version:
 
 ```
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
 ```
 
 Then install node:
 
-```
-nvm i lts
-nvm alias default lts
+```sh
+# this will install the latest LTS version
+nvm i --lts
 ```
 
 #### [ruby](https://www.ruby-lang.org)
