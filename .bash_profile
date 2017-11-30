@@ -12,7 +12,7 @@ if [[ -n "$PS1" ]]; then
   fi
 
   # Include all bash helper files
-  for file in ${DOTFILES}/bash/.{colors,exports,aliases,functions,langs,prompt,private}; do
+  for file in ${DOTFILES}/bash/{aliases,colors,exports,functions,languages,private,prompt}.sh; do
     [ -r "$file" ] && source "$file"
   done
 
