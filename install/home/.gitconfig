@@ -19,6 +19,7 @@
   todo = branch --no-merged
   update = fetch --all --prune
   lastchange = log -p --follow -n 1
+  praise = blame
 [credential]
   helper = osxkeychain
 [mergetool]
