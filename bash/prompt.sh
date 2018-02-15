@@ -9,6 +9,6 @@ if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
   remote="${PS_RED}☎  ${PS_CYAN}\u@\h "
 fi
 
-export PS1="${remote}${PS_GREEN}\w ${PS_RED}\$(parse_git_branch)${dcolor}$ ${PS_WHITE}"
+export PS1="${remote}${PS_GREEN}\w ${PS_RED}\$(parse_git_branch)${dcolor}∴ ${PS_WHITE}"
 
 unset dcolor client_loc
