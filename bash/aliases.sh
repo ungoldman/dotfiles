@@ -1,5 +1,6 @@
 # edit
 alias edit='atom'
+alias dotfiles='edit $DOTFILES'
 
 # utils
 alias l='ls -FlAG'
