@@ -1081,6 +1081,8 @@
 	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
+	<key>JobName</key>
+	<false/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
@@ -1128,7 +1130,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>650 516 620 392 0 0 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>580 493 937 512 0 0 1920 1058 </string>
+	<string>2170 604 918 452 1920 280 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 1920 1080 0 0 1920 1058 </string>
 	<key>New Bookmarks</key>
@@ -1771,7 +1773,7 @@
 			<key>Thin Strokes</key>
 			<integer>2</integer>
 			<key>Transparency</key>
-			<real>0.095403711928934015</real>
+			<real>0.16989213197969544</real>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
@@ -2519,7 +2521,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-06-28T18:33:52Z</date>
+	<date>2018-09-18T00:23:07Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowPaneTitles</key>
@@ -2530,6 +2532,8 @@
 	<real>0.21256760817307688</real>
 	<key>UseLionStyleFullscreen</key>
 	<false/>
+	<key>WindowNumber</key>
+	<false/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
@@ -2539,7 +2543,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.2.0beta4</string>
+	<string>3.2.1beta4</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
