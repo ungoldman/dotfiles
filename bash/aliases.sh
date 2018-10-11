@@ -36,6 +36,7 @@ alias galp='git config --get-regexp '^alias.' | sed s/^alias.//'
 alias ni='rm -rf node_modules && npm i'
 alias nis='rm -rf node_modules && npm i && npm start'
 alias nit='rm -rf node_modules && npm i && npm t'
+alias nii='rm -rf node_modules && npm cache clear --force && npm i'
 
 # internet
 alias browse='open -a "/Applications/Google Chrome.app" --args --ignore-gpu-blacklist'
