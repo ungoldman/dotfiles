@@ -13,7 +13,7 @@ My current setup:
 
 ## Install
 
-1. Clone this repository to a nice safe place. I tend to keep all my git-related work in `~/dev/git`.
+1. Clone this repository to a nice safe place. I tend to keep all my work in `~/dev`.
 
     ```sh
     ~ $ git clone git@github.com:ungoldman/dotfiles.git
