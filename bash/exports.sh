@@ -14,10 +14,9 @@ export PATH=$PATH:./node_modules/.bin
 # make sure brew paths precede /usr/bin
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
-# set atom as default editor
-# https://www.sublimetext.com/docs/3/osx_command_line.html
-export EDITOR='atom -nw'
-export VISUAL='atom -nw'
+# set code as default editor
+export EDITOR='code -nw'
+export VISUAL='code -nw'
 
 # pretty colors
 export CLICOLOR=1

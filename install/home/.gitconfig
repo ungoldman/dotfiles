@@ -28,6 +28,6 @@
   excludesfile = ~/.gitignore_global
   autocrlf = input
   ignorecase = false
-  editor = atom -nw
+  editor = code -nw
 [push]
   default = simple
