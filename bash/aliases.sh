@@ -1,5 +1,5 @@
 # edit
-alias edit='atom'
+alias edit='code'
 alias dotfiles='edit $DOTFILES'
 
 # utils
