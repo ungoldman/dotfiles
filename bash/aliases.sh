@@ -3,7 +3,7 @@ alias edit='code'
 alias dotfiles='edit $DOTFILES'
 
 # utils
-alias l='ls -FlAG'
+alias l='ls -FlAGh'
 alias grep='grep --color=auto'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
