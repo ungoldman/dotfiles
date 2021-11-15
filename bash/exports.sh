@@ -38,3 +38,6 @@ elif [[ "$OSTYPE" == "freebsd"* ]]; then
 else
   export OS='unknown'
 fi
+
+# https://support.apple.com/en-us/HT208050
+export BASH_SILENCE_DEPRECATION_WARNING=1
