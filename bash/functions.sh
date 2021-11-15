@@ -28,9 +28,7 @@ function maze {
   ruby -e 'print ["\u2571","\u2572"].sample while sleep 0.001'
 }
 
-function argle {
-  clear; ruby -e 'arr = (9500..9600).to_a; print "" << arr.sample.to_i.to_s(16).to_i(16) while sleep 0.05'
-}
+function argle { clear; ruby -e 'arr = (9000..9900).to_a; print "" << arr.sample.to_i.to_s(16).to_i(16) while sleep 0.05'; };
 
 function toggle_screenshot_shadow {
   if [ $(defaults read com.apple.screencapture disable-shadow) = true ]
