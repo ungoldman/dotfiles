@@ -30,7 +30,7 @@ alias simpler='export PS1="${PS_GREEN}\w ${PS_GREEN_BOLD}$ ${PS_WHITE}"'
 alias halp='alias -p'
 
 # get git alias halp
-alias galp='git config --get-regexp '^alias.' | sed s/^alias.//'
+alias galp='git config --get-regexp ^alias\. | sed -e s/^alias\.// -e s/\ /\=\/'
 
 # coffee time
 alias ni='rm -rf node_modules && npm i'
