@@ -110,7 +110,7 @@ Or, if you don't want/need launchctl, you can just run:
 
 ### macOS prefs
 
-Run `./install/mac.sh` (at your own risk) for the most l33t macOS settings.
+Run `./install/mac.sh` (at your own risk). NOTE: probably very, very outdated.
 
 ### Private environment variables
 
