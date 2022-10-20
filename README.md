@@ -11,6 +11,14 @@ My current setup:
 - laptop: early 2015 macbook pro 13"
 - server: digital ocean ubuntu 16.04
 
+## Pre-Install
+
+On MacOS, you'll need to install developer tools first.
+
+```sh
+xcode-select --install
+```
+
 ## Install
 
 1. Clone this repository to a nice safe place. I tend to keep all my work in `~/dev`.
