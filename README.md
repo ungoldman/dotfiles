@@ -6,11 +6,6 @@
 
 **These are my dotfiles. There are many like them, but these ones are mine.**
 
-My current setup:
-
-- laptop: early 2015 macbook pro 13"
-- server: digital ocean ubuntu 16.04
-
 ## Pre-Install
 
 On MacOS, you'll need to install developer tools first.
