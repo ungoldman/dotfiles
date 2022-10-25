@@ -1,29 +1,28 @@
-tap 'caskroom/cask'
-tap 'caskroom/versions'
-tap 'homebrew/bundle'
 tap 'homebrew/core'
-brew 'chruby'
+tap 'homebrew/cask'
+
+# latest git
 brew 'git'
+
+# node
+brew 'nvm'
+
+# ruby
+brew 'chruby'
+brew 'ruby-install'
+
+# python
+brew 'python3'
+
+# go
 brew 'go'
+
+# term utils
+brew 'tig'
 brew 'htop'
 brew 'hub'
-brew 'ruby-install'
-brew 'tig'
-brew 'wifi-password'
-brew 'yarn'
+
+# apps
 cask 'appcleaner'
-cask 'boxer'
 cask 'caffeine'
-cask 'dat'
-cask 'disk-inventory-x'
-cask 'google-chrome'
-cask 'iterm2'
-cask 'keepassx'
-cask 'licecap'
 cask 'loading'
-cask 'sketch'
-cask 'slack-beta'
-cask 'virtualbox'
-cask 'vlc'
-cask 'webtorrent'
-cask 'visual-studio-code'
