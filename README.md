@@ -37,7 +37,7 @@ xcode-select --install
 Homebrew enables access to a lot of useful packages in a fairly easy to handle way (it's like `apt-get` for macOS). Install like so:
 
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 To use the `Brewfile` in the root of this repo, you need [`homebrew-bundle`](https://github.com/Homebrew/homebrew-bundle).
@@ -51,30 +51,17 @@ cd $DOTFILES && brew bundle
 
 #### [node.js](http://nodejs.org)
 
-Use [`nvm`](https://github.com/creationix/nvm) to manage node versions. Be sure to use the latest version:
+Install latest [`nvm`](https://github.com/creationix/nvm) to manage node versions.
 
 ```
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
+brew install nvm
 ```
 
-Then install node:
+Install latest LTS node:
 
 ```sh
-# this will install the latest LTS version
 nvm i --lts
 ```
-
-#### [ruby](https://www.ruby-lang.org)
-
-- `brew bundle` installs [ruby-install](https://github.com/postmodern/ruby-install) and [chruby](https://github.com/postmodern/chruby), which are nice simple tools for managing ruby versions.
-- `bash/.langs` includes a line to load chruby and switch to ruby v2 if it's present
-- [to install the latest ruby](https://github.com/postmodern/ruby-install#synopsis): `ruby-install ruby`
-- you'll probably need [bundler](http://gembundler.com): `gem install bundler`
-
-#### [go](https://golang.org)
-
-- `brew bundle` installs latest `go`.
-- `bash/.langs` defaults to setting `GOPATH` to `~/dev/go`.
 
 ### Databases
 
@@ -108,13 +95,9 @@ Or, if you don't want/need launchctl, you can just run:
   redis-server /usr/local/etc/redis.conf
 ```
 
-### macOS prefs
+### Private env vars
 
-Run `./install/mac.sh` (at your own risk). NOTE: probably very, very outdated.
-
-### Private environment variables
-
-The `.bash_profile` file at the root of this repo will attempt to source a `bash/.private` file (ignored by this repository's `.gitignore`) that's meant to include anything you don't want to check into version control.
+The `.bash_profile` file at the root of this repo will attempt to source a `bash/.private` file (ignored by this repository's `.gitignore`) that's meant to include anything that shouldn't be checked into version control (secrets, device-specific commands & aliases, etc).
 
 ### More install scripts
 
