@@ -7,6 +7,9 @@ alias l='ls -FlAGh'
 alias grep='grep --color=auto'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
+# alias hub to git
+alias git=hub
+
 # git
 alias g='git'
 alias ga='git add'
@@ -15,12 +18,6 @@ alias gca='git commit --amend'
 alias gcm='git commit -m'
 alias gd='git diff'
 alias gds='git diff --staged'
-
-# alias hub to git
-command -v hub >/dev/null 2>&1 && eval "$(hub alias -s)"
-
-# github pull request
-command -v hub >/dev/null 2>&1 && alias preq='hub pull-request'
 
 # prompt options
 alias rebash='source ~/.bash_profile'
