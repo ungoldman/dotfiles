@@ -31,3 +31,4 @@
   editor = code -nw
 [push]
   default = simple
+  autoSetupRemote = true
