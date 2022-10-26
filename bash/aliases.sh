@@ -21,7 +21,7 @@ alias gds='git diff --staged'
 
 # prompt options
 alias rebash='source ~/.bash_profile'
-alias simpler='export PS1="${PS_GREEN}\w ${PS_GREEN_BOLD}$ ${PS_WHITE}"'
+alias simpler='export PS1="${PS_GREEN_BOLD}$ ${PS_WHITE}"'
 
 # get alias halp
 alias halp='alias -p'
@@ -42,7 +42,7 @@ alias browse='open -a "/Applications/Google Chrome.app" --args --ignore-gpu-blac
 alias findrouter='netstat -nr | grep default'
 
 # serve a directory
-alias serve='python -m SimpleHTTPServer 8000'
+alias serve='npx @ungoldman/serve'
 
 # flush dns
 alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache'
