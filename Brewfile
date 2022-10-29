@@ -24,5 +24,7 @@ brew 'hub'
 
 # apps
 cask 'appcleaner'
+cask 'balance-lock'
 cask 'caffeine'
 cask 'loading'
+cask 'postico'
