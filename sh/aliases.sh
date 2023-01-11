@@ -16,6 +16,9 @@ alias gcm='git commit -m'
 alias gd='git diff'
 alias gds='git diff --staged'
 
+# hub
+alias b='hub browse'
+
 # prompt options
 alias rebash='source ~/.bash_profile'
 alias simpler='export PS1="${PS_GREEN_BOLD}$ ${PS_WHITE}"'
