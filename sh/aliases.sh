@@ -21,7 +21,7 @@ alias rebash='source ~/.bash_profile'
 alias simpler='export PS1="${PS_GREEN_BOLD}$ ${PS_WHITE}"'
 
 # get alias halp
-alias halp='alias -p'
+alias halp='alias'
 
 # get git alias halp
 alias galp='git config --get-regexp ^alias\. | sed -e s/^alias\.// -e s/\ /\=\/'
