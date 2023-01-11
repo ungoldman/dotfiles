@@ -47,6 +47,20 @@ brew tap Homebrew/bundle
 cd $DOTFILES && brew bundle
 ```
 
+### zsh
+
+Install latest zsh with `brew install zsh`.
+
+Currently using [starship](https://starship.rs/) via `brew install starship`.
+
+Using [Hack Nerd Font](https://www.nerdfonts.com/font-downloads) with [Nerd Font Symbols](https://starship.rs/presets/#nerd-font-symbols) starship preset for maximum icons and legibility.
+
+zsh extensions (installed via brew):
+
+- zsh-autosuggestions
+- zsh-completions
+- zsh-syntax-highlighting
+
 ### Languages
 
 #### [node.js](http://nodejs.org)

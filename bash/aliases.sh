@@ -7,9 +7,6 @@ alias l='ls -FlAGh'
 alias grep='grep --color=auto'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
-# alias hub to git
-alias git=hub
-
 # git
 alias g='git'
 alias ga='git add'
