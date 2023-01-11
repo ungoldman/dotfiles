@@ -6,15 +6,15 @@
 
 **These are my dotfiles. There are many like them, but these ones are mine.**
 
-## Pre-Install
+## Install
 
-On MacOS, you'll need to install developer tools first.
+Developer tools must be installed first (macos only).
 
 ```
 xcode-select --install
 ```
 
-## Install
+Clone repo, run install script, reload terminal: maximum success.
 
 ```sh
 # clone
@@ -22,15 +22,11 @@ git clone git@github.com:ungoldman/dotfiles.git
 
 # run install script
 ./dotfiles/install.sh # <-- adds call to init.sh in ~/.profile (shell agnostic)
-
-# reload terminal for new powers
 ```
 
 ### [homebrew](http://brew.sh)
 
 Homebrew enables access to a lot of useful packages in a fairly easy to handle way (it's like `apt-get` for macOS).
-
-### Install
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -93,7 +89,7 @@ brew install redis
 
 ### Private env vars
 
-The `init.sh` file at the root of this repo will attempt to source a `sh/.private.sh` file (ignored by this repository's `.gitignore`) that's meant to include anything that shouldn't be checked into version control (secrets, device-specific commands & aliases, etc).
+The `init.sh` file at the root of this repo will attempt to source a `sh/.private.sh` file (ignored via `.gitignore`) that's meant to include anything that shouldn't be checked into version control (secrets, device-specific commands & aliases, etc).
 
 ### More install scripts
 
