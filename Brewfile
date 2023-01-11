@@ -4,18 +4,18 @@ tap 'homebrew/cask'
 # latest git
 brew 'git'
 
+# latest zsh & friends
+brew 'zsh'
+brew 'starship'
+brew 'zsh-autosuggestions'
+brew 'zsh-completions'
+brew 'zsh-syntax-highlighting'
+
 # node
 brew 'nvm'
 
-# ruby
-brew 'chruby'
-brew 'ruby-install'
-
 # python
 brew 'python3'
-
-# go
-brew 'go'
 
 # term utils
 brew 'tig'

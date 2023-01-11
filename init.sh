@@ -1,11 +1,15 @@
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+if [[ -n "$PS1" ]]; then
 
-cat <<EOT >> ~/.bash_profile
+  # Set $DOTFILES environmental variable
+  if [ -z ${DOTFILES+x} ]; then
+    DOTFILES="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+  fi
 
-# include dotfiles
-export DOTFILES="${DIR}"
-[ -f \${DOTFILES}/.bash_profile ] && source \${DOTFILES}/.bash_profile
+  # Include all bash helper files
+  for file in ${DOTFILES}/sh/*.sh; do
+    [ -r "$file" ] && source "$file"
+  done
 
-EOT
+  unset file
 
-unset DIR
+fi

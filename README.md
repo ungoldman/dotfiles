@@ -10,24 +10,26 @@
 
 On MacOS, you'll need to install developer tools first.
 
-```sh
+```
 xcode-select --install
 ```
 
 ## Install
 
+**Note:** designed for use with `zsh` (not bash).
+
 1. Clone this repository to a nice safe place. I tend to keep all my work in `~/dev`.
 
-    ```sh
+    ```
     ~ $ git clone git@github.com:ungoldman/dotfiles.git
     ```
 
-2. run the `./init.sh` script at the root of this repository. This will add the following to your `~/.bash_profile` (`DIR` resolves to the local `dotfiles` directory in the script):
+2. Run the `./install.sh` script at the root of this repository. This will add the following to your `~/.zshrc` (`DIR` resolves to the local `dotfiles` directory in the script):
 
     ```
-    # include dotfiles
+    # init dotfiles
     export DOTFILES="${DIR}"
-    [ -f \${DOTFILES}/.bash_profile ] && source \${DOTFILES}/.bash_profile
+    [ -f \${DOTFILES}/.init ] && source \${DOTFILES}/.init
     ```
 
 3. Start a new terminal session. If everything went well, your bash environment is ready to go.
@@ -73,9 +75,11 @@ brew install nvm
 
 Install latest LTS node:
 
-```sh
+```
 nvm i --lts
 ```
+
+**Note:** I used to work more with ruby, python, and go, but it's been so long the relevant sections here were outdated, so I removed them.
 
 ### Databases
 
@@ -85,37 +89,19 @@ nvm i --lts
 brew install postgres
 ```
 
-```
-To have launchd start postgresql at login:
-  ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
-Then to load postgresql now:
-  launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
-Or, if you don't want/need launchctl, you can just run:
-  postgres -D /usr/local/var/postgres
-```
-
 #### [redis](http://redis.io/)
 
 ```
 brew install redis
 ```
 
-```
-To have launchd start redis at login:
-  ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
-Then to load redis now:
-  launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
-Or, if you don't want/need launchctl, you can just run:
-  redis-server /usr/local/etc/redis.conf
-```
-
 ### Private env vars
 
-The `.bash_profile` file at the root of this repo will attempt to source a `bash/.private` file (ignored by this repository's `.gitignore`) that's meant to include anything that shouldn't be checked into version control (secrets, device-specific commands & aliases, etc).
+The `init.sh` file at the root of this repo will attempt to source a `sh/.private.sh` file (ignored by this repository's `.gitignore`) that's meant to include anything that shouldn't be checked into version control (secrets, device-specific commands & aliases, etc).
 
 ### More install scripts
 
-You can run scripts in the `install` directory, but be advised they should only be run once and may have unwanted effects if you don't read through them first.
+There are some extra scripts in the `install` directory, but be advised most should only ever be run once, may have unwanted effects, and are probably very, very out of date.
 
 ## License
 
