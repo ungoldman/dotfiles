@@ -14,15 +14,21 @@ Developer tools must be installed first (macos only).
 xcode-select --install
 ```
 
-Clone repo, run install script, reload terminal: maximum success.
+Clone repo somewhere smart.
 
 ```sh
-# clone
 git clone git@github.com:ungoldman/dotfiles.git
-
-# run install script
-./dotfiles/install.sh # <-- adds call to init.sh in ~/.profile (shell agnostic)
 ```
+
+Source `init.sh` in your shell profile (`.bashrc`, `.zshrc`, etc.).
+
+```sh
+source ~/dotfiles/init.sh
+```
+
+Reload terminal. 🚀
+
+## Tools
 
 ### [homebrew](http://brew.sh)
 
@@ -86,6 +92,8 @@ brew install postgres
 ```
 brew install redis
 ```
+
+## Config
 
 ### Private env vars
 
