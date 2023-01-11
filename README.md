@@ -16,31 +16,27 @@ xcode-select --install
 
 ## Install
 
-**Note:** designed for use with `zsh` (not bash).
+```sh
+# clone
+git clone git@github.com:ungoldman/dotfiles.git
 
-1. Clone this repository to a nice safe place. I tend to keep all my work in `~/dev`.
+# run install script
+./dotfiles/install.sh # <-- adds call to init.sh in ~/.profile (shell agnostic)
 
-    ```
-    ~ $ git clone git@github.com:ungoldman/dotfiles.git
-    ```
-
-2. Run the `./install.sh` script at the root of this repository. This will add the following to your `~/.zshrc` (`DIR` resolves to the local `dotfiles` directory in the script):
-
-    ```
-    # init dotfiles
-    export DOTFILES="${DIR}"
-    [ -f \${DOTFILES}/.init ] && source \${DOTFILES}/.init
-    ```
-
-3. Start a new terminal session. If everything went well, your bash environment is ready to go.
+# reload terminal for new powers
+```
 
 ### [homebrew](http://brew.sh)
 
-Homebrew enables access to a lot of useful packages in a fairly easy to handle way (it's like `apt-get` for macOS). Install like so:
+Homebrew enables access to a lot of useful packages in a fairly easy to handle way (it's like `apt-get` for macOS).
+
+### Install
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+
+### Brewfile
 
 To use the `Brewfile` in the root of this repo, you need [`homebrew-bundle`](https://github.com/Homebrew/homebrew-bundle).
 
@@ -51,13 +47,13 @@ cd $DOTFILES && brew bundle
 
 ### zsh
 
-Install latest zsh with `brew install zsh`.
+Using `zsh` (use latest: `brew install zsh`).
 
-Currently using [starship](https://starship.rs/) via `brew install starship`.
+Using [starship](https://starship.rs/) (`brew install starship`).
 
 Using [Hack Nerd Font](https://www.nerdfonts.com/font-downloads) with [Nerd Font Symbols](https://starship.rs/presets/#nerd-font-symbols) starship preset for maximum icons and legibility.
 
-zsh extensions (installed via brew):
+Completion extensions (via brew):
 
 - zsh-autosuggestions
 - zsh-completions
