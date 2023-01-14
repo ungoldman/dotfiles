@@ -13,7 +13,8 @@ function parse_git_branch {
 }
 
 function render_prompt {
-  # colors for prompt
+  local PROMPT=""
+
   local RED="\033[0;31m"
   local GREEN="\033[0;32m"
   local PURPLE="\033[0;35m"
@@ -24,21 +25,23 @@ function render_prompt {
   local PS_PURPLE="\[${PURPLE}\]"
   local PS_CYAN="\[${CYAN}\]"
   local PS_RED_BOLD="\[${RED_BOLD}\]"
+  local RESET="\[\e[0m\]"
 
-  local dcolor=$PS_GREEN
-  local remote=""
-  local last_cmd_status="\[\$(if [ \$? == 0 ]; then echo -e \"\\e[0;92m\"; else echo -e \"\\e[0;91m\"; fi)\]∴\[\e[0m\] "
-  local reset="\[\e[0m\]"
-
-  if [ ${UID} -eq 0 ]; then
-  dcolor=$PS_RED_BOLD
-  fi
-
+  # ssh
   if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-    remote="${PS_RED}☎  ${PS_CYAN}\u@\h "
+    PROMPT+="${PS_RED}☎  ${PS_CYAN}\u@\h "
   fi
 
-  echo "${remote}${last_cmd_status}${PS_PURPLE}\w ${PS_RED}\$(parse_git_branch)${dcolor}$ ${reset}"
+  # current dir
+  PROMPT+="${PS_PURPLE}\w "
+
+  # git
+  PROMPT+="${PS_RED}\$(parse_git_branch)"
+
+  # caret
+  PROMPT+="${PS_GREEN}❯${RESET}"
+
+  echo $PROMPT
 }
 
-export PS1="$(render_prompt)"
+export PS1="$(render_prompt) "
