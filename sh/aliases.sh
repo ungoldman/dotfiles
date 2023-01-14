@@ -1,6 +1,7 @@
 # edit
 alias edit='code'
 alias dotfiles='edit $DOTFILES'
+alias cddotfiles='cd $DOTFILES'
 
 # utils
 alias l='ls -FlAGh'
@@ -13,6 +14,7 @@ alias simpler='echo; export PS1="❯ "'
 
 # zsh helpers
 alias rezsh='exec zsh'
+alias hist='history 1'
 
 # list all aliases
 alias halp='alias'
