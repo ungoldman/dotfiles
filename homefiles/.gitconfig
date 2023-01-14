@@ -20,6 +20,7 @@
   update = fetch --all --prune
   lastchange = log -p --follow -n 1
   praise = blame
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 [credential]
   helper = osxkeychain
 [mergetool]
@@ -31,4 +32,6 @@
   editor = code -nw
 [push]
   default = simple
-  autoSetupRemote = true
+	autoSetupRemote = true
+[init]
+	defaultBranch = main
