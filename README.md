@@ -97,10 +97,6 @@ brew install redis
 
 ## Config
 
-### `/sh/private.sh`
-
-The `init.sh` file at the root of this repo will attempt to source a `sh/.private.sh` file (ignored via `.gitignore`) that's meant to include anything that shouldn't be checked into version control (secrets, device-specific commands & aliases, etc).
-
 ### `/homefiles`
 
 A collection of files for your home directory (like `.gitconfig`, `.inputrc`, ..).
@@ -112,6 +108,10 @@ There are some extra scripts in the `install` directory, but be advised most sho
 ### `/prefs`
 
 Misc preference files for apps & programs.
+
+### private stuff - `/sh/private.sh` or `/sh/_*.sh`
+
+The `init.sh` file at the root of this repo will attempt to source any `.sh` file in the `sh` directory. Git will ignore `sh/private.sh`, as well as any `.sh` file prefixed with `_`. Use this to include anything that shouldn't be checked into version control (secrets, device-specific commands & aliases, etc).
 
 ## License
 
