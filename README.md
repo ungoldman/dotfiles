@@ -55,7 +55,7 @@ Using `zsh` (use latest: `brew install zsh`).
 
 Using [starship](https://starship.rs/) (`brew install starship`).
 
-Using [Hack Nerd Font](https://www.nerdfonts.com/font-downloads) with [Nerd Font Symbols](https://starship.rs/presets/#nerd-font-symbols) starship preset for maximum icons and legibility.
+Using [Hack Nerd Font](https://www.nerdfonts.com/font-downloads) with [Nerd Font Symbols](https://starship.rs/presets/#nerd-font-symbols) starship preset for maximum icons and legibility (for symbols to render correctly, _do not_ use monospace font).
 
 Completion extensions (via brew):
 
