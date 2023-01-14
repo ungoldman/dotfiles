@@ -21,6 +21,7 @@ alias b='hub browse'
 
 # prompt options
 alias rebash='source ~/.bash_profile'
+alias rezsh='exec zsh'
 alias simpler='export PS1="${PS_GREEN_BOLD}$ ${PS_WHITE}"'
 
 # get alias halp
