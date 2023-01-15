@@ -62,6 +62,7 @@ Completion extensions (via brew):
 - zsh-autosuggestions
 - zsh-completions
 - zsh-syntax-highlighting
+- zsh-history-substring-search
 
 ### Languages
 
