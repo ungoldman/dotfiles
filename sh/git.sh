@@ -11,4 +11,5 @@ alias gds='git diff --staged'
 alias galp='(alias | grep "git") && (git config --get-regexp ^alias\. | sed -e s/^alias\.// -e s/\ /\=\/)'
 
 # hub
+alias h='hub'
 alias b='hub browse'
