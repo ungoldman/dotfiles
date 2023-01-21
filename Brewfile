@@ -18,11 +18,16 @@ brew 'nvm'
 brew 'python3'
 
 # term utils
-brew 'tig'
-brew 'htop'
-brew 'hub'
+brew 'bat' # cat with wings
+brew 'tig' # ncurses git repo browser
+brew 'htop' # fancy top
+brew 'hub' # github utils for git
+brew 's-search' # command line web search
+brew 'm-cli' # mac cli helper
+brew 'jq' # do things with json
 
 # apps
+cask 'amethyst'
 cask 'appcleaner'
 cask 'balance-lock'
 cask 'caffeine'
