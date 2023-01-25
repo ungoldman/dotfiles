@@ -17,25 +17,25 @@ preexec() { printf "\033]0;  `history $HISTCMD | cut -b7-`  \007"; }
 # can conflict with each other or other stuff or not pick up important
 # things to complete if they're run too early
 
-# brew install zsh-completions
 if type brew &>/dev/null; then
+  # brew install zsh-completions
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
   autoload -Uz compinit
   compinit
+
+  # brew install zsh-autosuggestions
+  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+  # brew install zsh-syntax-highlighting
+  source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+  # brew install zsh-history-substring-search
+  source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 fi
 
 # case insensitive path-completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
-
-# brew install zsh-autosuggestions
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# brew install zsh-syntax-highlighting
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# brew install zsh-history-substring-search
-source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # home/end keys be normal ffs
 bindkey '\e[H'    beginning-of-line
