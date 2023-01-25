@@ -13,6 +13,10 @@ precmd_functions+=(set_win_title)
 preexec() { printf "\033]0;  `history $HISTCMD | cut -b7-`  \007"; }
 # two above seem to coexist okay. shruggerooney
 
+# note that order matters here, zsh completions/suggestions/etc
+# can conflict with each other or other stuff or not pick up important
+# things to complete if they're run too early
+
 # brew install zsh-completions
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
@@ -25,11 +29,9 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
 
 # brew install zsh-autosuggestions
-# must be at end of file
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # brew install zsh-syntax-highlighting
-# must be at end of file
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # brew install zsh-history-substring-search
