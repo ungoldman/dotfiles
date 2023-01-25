@@ -22,10 +22,10 @@ Clone repo somewhere smart.
 git clone git@github.com:ungoldman/dotfiles.git
 ```
 
-Source `dotfiles.sh` in your shell profile (`.bashrc`, `.zshrc`, etc.).
+Source `init.sh` in your shell profile (currently configured for `zsh`, won't work great with other shells).
 
 ```sh
-source ~/dotfiles/dotfiles.sh
+source ~/dotfiles/init.sh
 ```
 
 Reload terminal. 🚀
