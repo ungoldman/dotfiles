@@ -14,8 +14,6 @@ alias simpler='echo; export PS1="❯ "'
 
 # zsh helpers
 alias rezsh='exec zsh'
-alias hist='history'
-alias histall='history 1'
 
 # list all aliases
 alias halp='alias'
