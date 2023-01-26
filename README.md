@@ -30,6 +30,10 @@ source ~/dotfiles/init.sh
 
 Reload terminal. 🚀
 
+> <small>**Note:**<br>
+> `.zshrc` expects a lot of the tools below to be installed already.<br>
+> Redesign to accomodate missing pieces & incremental installs forthcoming.</small>
+
 ## Tools
 
 ### [homebrew](http://brew.sh)
@@ -98,21 +102,21 @@ brew install redis
 
 ## Config
 
+### private stuff - `/sh/private.sh` or `/sh/_*.sh`
+
+The `init.sh` file at the root of this repo will attempt to source any `.sh` file in the `sh` directory. Git will ignore `sh/private.sh`, as well as any `.sh` file prefixed with `_`. Use this to include anything that shouldn't be checked into version control (secrets, device-specific commands & aliases, etc).
+
 ### `/homefiles`
 
 A collection of files for your home directory (like `.gitconfig`, `.inputrc`, ..).
-
-### `/install`
-
-There are some extra scripts in the `install` directory, but be advised most should only ever be run once, may have unwanted effects, and are probably very, very out of date.
 
 ### `/prefs`
 
 Misc preference files for apps & programs.
 
-### private stuff - `/sh/private.sh` or `/sh/_*.sh`
+### `/remote`
 
-The `init.sh` file at the root of this repo will attempt to source any `.sh` file in the `sh` directory. Git will ignore `sh/private.sh`, as well as any `.sh` file prefixed with `_`. Use this to include anything that shouldn't be checked into version control (secrets, device-specific commands & aliases, etc).
+Bash config and miscellaneous goodies for working with remote servers, VPS instances, etc.
 
 ## License
 
