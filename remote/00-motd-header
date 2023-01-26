@@ -1,6 +1,8 @@
 #!/bin/sh
-#
-#    00-header - fancy MOTD header
+# 00-header - fancy MOTD header
+# tuned for ubuntu with docker / dokku
+# keeping here for reference
+# RIP VALIS (my old personal mini-heroku)
 
 [ -r /etc/lsb-release ] && . /etc/lsb-release
 
