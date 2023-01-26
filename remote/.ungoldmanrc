@@ -1,3 +1,6 @@
+# remote helpers for users named ungoldman
+# https://github.com/ungoldman/dotfiles
+
 # pretty ls colors
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
