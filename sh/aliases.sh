@@ -6,7 +6,13 @@ alias cddotfiles='cd $DOTFILES'
 # utils
 alias l='ls -FlAGh'
 alias grep='grep --color=auto'
-alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+alias tree="find . -print | sed -e 's;[^/]*/;|__;g;s;__|; |;g' | less"
+
+if [[ -r "/opt/homebrew/bin/bat" ]]; then
+  alias c='bat';
+else
+  alias c='pygmentize -g';
+fi
 
 # bash helpers
 alias rebash='source ~/.bash_profile'
