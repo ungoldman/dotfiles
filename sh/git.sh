@@ -8,7 +8,7 @@ alias gd='git diff'
 alias gds='git diff --staged'
 
 # list all git aliases
-alias galp='(alias | grep "git") && (git config --get-regexp ^alias\. | sed -e s/^alias\.// -e s/\ /\=\/)'
+alias galp='git alias'
 
 # hub
 alias h='hub'

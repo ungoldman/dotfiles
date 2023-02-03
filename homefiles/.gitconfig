@@ -2,25 +2,27 @@
   ui = auto
 [alias]
   a = add
+  alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
   b = branch
   c = commit
+  ca = commit --amend
   cm = commit -m
-  d = diff
-  dw = diff --word-diff
-  ds = diff --staged
-  dws = diff --word-diff --staged
   co = checkout
+  d = diff
+  done = branch --merged
+  ds = diff --staged
+  dw = diff --word-diff
+  dws = diff --word-diff --staged
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  lastchange = log -p --follow -n 1
+  praise = blame
   r = remote
   s = status
   sup = branch --all --verbose
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  unstage = reset HEAD --
-  done = branch --merged
   todo = branch --no-merged
+  unstage = reset HEAD --
   update = fetch --all --prune
-  lastchange = log -p --follow -n 1
-  praise = blame
-	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+  v = tag --sort=v:refname
 [credential]
   helper = osxkeychain
 [mergetool]
@@ -32,6 +34,6 @@
   editor = code -nw
 [push]
   default = simple
-	autoSetupRemote = true
+  autoSetupRemote = true
 [init]
-	defaultBranch = main
+  defaultBranch = main
