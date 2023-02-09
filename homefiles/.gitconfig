@@ -18,11 +18,11 @@
   praise = blame
   r = remote
   s = status
+  t = tag --sort=v:refname
   sup = branch --all --verbose
   todo = branch --no-merged
   unstage = reset HEAD --
   update = fetch --all --prune
-  v = tag --sort=v:refname
 [credential]
   helper = osxkeychain
 [mergetool]
