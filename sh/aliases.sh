@@ -21,6 +21,9 @@ alias simpler='echo; export PS1="❯ "'
 # zsh helpers
 alias rezsh='exec zsh'
 
+# docker helpers
+alias dc='docker compose'
+
 # list all aliases
 alias halp='alias'
 
