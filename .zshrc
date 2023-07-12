@@ -20,8 +20,8 @@ preexec() { printf "\033]0;  `history $HISTCMD | cut -b7-`  \007"; }
 if type brew &>/dev/null; then
   # brew install zsh-completions
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-  autoload -Uz compinit
-  compinit
+  autoload bashcompinit && bashcompinit
+  autoload -Uz compinit && compinit
 
   # brew install zsh-autosuggestions
   source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -31,6 +31,12 @@ if type brew &>/dev/null; then
 
   # brew install zsh-history-substring-search
   source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+  # aws tab completion
+  # https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html
+  if type aws &>/dev/null; then
+    complete -C '/opt/homebrew/bin/aws_completer' aws
+  fi
 fi
 
 # case insensitive path-completion
