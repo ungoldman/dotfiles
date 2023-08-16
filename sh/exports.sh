@@ -14,3 +14,7 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # so you can control-D out of a program but not accidentally lose your shell
 export IGNOREEOF=12
+
+# disable homebrew analytics
+# https://docs.brew.sh/Analytics
+export HOMEBREW_NO_ANALYTICS=1
