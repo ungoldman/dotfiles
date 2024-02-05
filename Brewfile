@@ -1,6 +1,3 @@
-tap 'homebrew/core'
-tap 'homebrew/cask'
-
 # latest git
 brew 'git'
 
@@ -9,25 +6,28 @@ brew 'zsh'
 brew 'starship'
 brew 'zsh-autosuggestions'
 brew 'zsh-completions'
+brew 'zsh-history-substring-search'
 brew 'zsh-syntax-highlighting'
-
-# node
-brew 'nvm'
-
-# python
-brew 'python3'
 
 # term utils
 brew 'bat' # cat with wings
 brew 'tig' # ncurses git repo browser
 brew 'htop' # fancy top
-brew 'hub' # github utils for git
-brew 'm-cli' # mac cli helper
-brew 'jq' # do things with json
+
+# node
+brew 'nvm'
+
+# github
+brew 'gh'
+
+# img utils
+brew 'imagemagick'
+brew 'graphicsmagick'
 
 # apps
-cask 'amethyst'
 cask 'appcleaner'
 cask 'balance-lock'
 cask 'caffeine'
-cask 'postico'
+cask 'coconutbattery'
+cask 'iterm2'
+cask 'visual-studio-code'

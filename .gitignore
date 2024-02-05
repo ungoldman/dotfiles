@@ -1,2 +1,3 @@
 sh/private.sh
 sh/_*.sh
+Brewfile.lock.json
