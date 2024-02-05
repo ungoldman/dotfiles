@@ -10,9 +10,8 @@ alias gds='git diff --staged'
 # list all git aliases
 alias galp='git alias'
 
-# hub
-alias h='hub'
-alias b='hub browse'
+# github
+alias b='gh browse'
 
 # borrowed from oh-my-zsh
 # https://github.com/ohmyzsh/ohmyzsh/blob/1c8dee848dad169c9eb1a7b0148842b48a99cad1/plugins/git/git.plugin.zsh#L35
