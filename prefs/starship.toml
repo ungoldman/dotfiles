@@ -1,4 +1,5 @@
 # starship config
+# ~/.config/starship.toml
 # ref: https://starship.rs/config
 
 format = """
@@ -29,142 +30,6 @@ continuation_prompt = '▶▶'
 
 command_timeout = 1000
 
-### NERD FONT SYMBOLS PRESET BEGIN
-
-[aws]
-symbol = ' '
-
-[buf]
-symbol = ' '
-
-[c]
-symbol = ' '
-
-[conda]
-symbol = ' '
-
-[dart]
-symbol = ' '
-
-[directory]
-read_only = ' '
-truncate_to_repo = false
-truncation_length = 5
-
-[docker_context]
-symbol = ' '
-
-[elixir]
-symbol = ' '
-
-[elm]
-symbol = ' '
-
-[git_branch]
-symbol = ' '
-format = '[$symbol$branch(:$remote_branch)]($style) '
-
-[golang]
-symbol = ' '
-
-[guix_shell]
-symbol = ' '
-
-[haskell]
-symbol = ' '
-
-[haxe]
-symbol = '⌘ '
-
-[hg_branch]
-symbol = ' '
-
-[java]
-symbol = ' '
-
-[julia]
-symbol = ' '
-
-[lua]
-symbol = ' '
-
-[memory_usage]
-symbol = ' '
-
-[meson]
-symbol = '喝 '
-
-[nim]
-symbol = ' '
-
-[nix_shell]
-symbol = ' '
-
-[nodejs]
-symbol = ' '
-
-[os.symbols]
-Alpine = ' '
-Amazon = ' '
-Android = ' '
-Arch = ' '
-CentOS = ' '
-Debian = ' '
-DragonFly = ' '
-Emscripten = ' '
-EndeavourOS = ' '
-Fedora = ' '
-FreeBSD = ' '
-Garuda = '﯑ '
-Gentoo = ' '
-HardenedBSD = 'ﲊ '
-Illumos = ' '
-Linux = ' '
-Macos = ' '
-Manjaro = ' '
-Mariner = ' '
-MidnightBSD = ' '
-Mint = ' '
-NetBSD = ' '
-NixOS = ' '
-OpenBSD = ' '
-openSUSE = ' '
-OracleLinux = ' '
-Pop = ' '
-Raspbian = ' '
-Redhat = ' '
-RedHatEnterprise = ' '
-Redox = ' '
-Solus = 'ﴱ '
-SUSE = ' '
-Ubuntu = ' '
-Unknown = ' '
-Windows = ' '
-
-[package]
-symbol = ' '
-format = '\[[$symbol$version]($style)\] '
-
-[python]
-symbol = ' '
-
-[rlang]
-symbol = 'ﳒ '
-
-[ruby]
-symbol = ' '
-
-[rust]
-symbol = ' '
-
-[scala]
-symbol = ' '
-
-[spack]
-symbol = '🅢 '
-
-### NERD FONT SYMBOLS PRESET END
-
 [sudo]
 format = '[as $symbol]($style)'
 disabled = false
@@ -178,7 +43,7 @@ disabled = false
 # show_notifications = true
 min_time = 1_000
 # show_milliseconds = true
-format = '[祥$duration]($style) '
+format = '[$duration]($style) '
 
 [shlvl]
 symbol = '→'
@@ -194,3 +59,168 @@ detect_folders = ['environments']
 
 [kubernetes.context_aliases]
 'arn:aws:eks:us-west-2:\d+:cluster/(?P<var_cluster>[\w-]+)' = '$var_cluster'
+
+### NERD FONTS v3
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[crystal]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+read_only = " 󰌾"
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[fennel]
+symbol = " "
+
+[fossil_branch]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[hostname]
+ssh_symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[kotlin]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nim]
+symbol = "󰆥 "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[ocaml]
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
+
+[package]
+symbol = "󰏗 "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[pijul_channel]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[swift]
+symbol = " "
+
+[zig]
+symbol = " "
+
+### END NERD FONTS v3
