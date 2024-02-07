@@ -8,11 +8,13 @@
   ca = commit --amend
   cm = commit -m
   co = checkout
+  com = checkout $(git_main_branch)
   d = diff
   done = branch --merged
   ds = diff --staged
   dw = diff --word-diff
   dws = diff --word-diff --staged
+  h = alias
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   lastchange = log -p --follow -n 1
   praise = blame
@@ -37,3 +39,5 @@
   autoSetupRemote = true
 [init]
   defaultBranch = main
+[rerere]
+  enabled = true
