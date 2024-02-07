@@ -11,7 +11,7 @@ alias gds='git diff --staged'
 alias galp='git alias'
 
 # github
-alias b='gh browse'
+alias b='gh browse -b $(git rev-parse --abbrev-ref HEAD)'
 
 # borrowed from oh-my-zsh
 # https://github.com/ohmyzsh/ohmyzsh/blob/1c8dee848dad169c9eb1a7b0148842b48a99cad1/plugins/git/git.plugin.zsh#L35
