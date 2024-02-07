@@ -34,11 +34,13 @@ Install packages in Brewfile
 ~/dotfiles $ brew bundle
 ```
 
-Source `init.sh` in your shell profile (currently configured for `zsh`, won't work great with other shells).
+Add this line to `~/.zshrc`
 
 ```sh
-$ source ~/dotfiles/init.sh
+source ~/dotfiles/init.sh
 ```
+
+Note: dotfiles are currently configured for `zsh`, won't work with other shells.
 
 ## Tools
 
