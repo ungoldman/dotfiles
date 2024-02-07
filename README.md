@@ -8,31 +8,37 @@
 
 </div>
 
-## Install
+## Fresh Install (MacOS)
 
-Developer tools must be installed first (macos only).
+Install Xcode Command-Line Tools
 
-```
+```sh
 xcode-select --install
 ```
 
-Clone repo somewhere smart.
+Install homebrew
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Clone repo
 
 ```sh
 git clone git@github.com:ungoldman/dotfiles.git
 ```
 
+Install packages in Brewfile
+
+```sh
+~/dotfiles $ brew bundle
+```
+
 Source `init.sh` in your shell profile (currently configured for `zsh`, won't work great with other shells).
 
 ```sh
-source ~/dotfiles/init.sh
+$ source ~/dotfiles/init.sh
 ```
-
-Reload terminal. 🚀
-
-> <small>**Note:**<br>
-> `.zshrc` expects a lot of the tools below to be installed already.<br>
-> Redesign to accomodate missing pieces & incremental installs forthcoming.</small>
 
 ## Tools
 
@@ -40,7 +46,7 @@ Reload terminal. 🚀
 
 Homebrew enables access to a lot of useful packages in a fairly easy to handle way (it's like `apt-get` for macOS).
 
-```
+```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
@@ -48,7 +54,7 @@ Homebrew enables access to a lot of useful packages in a fairly easy to handle w
 
 To use the `Brewfile` in the root of this repo, you need [`homebrew-bundle`](https://github.com/Homebrew/homebrew-bundle).
 
-```
+```sh
 brew tap Homebrew/bundle
 cd $DOTFILES && brew bundle
 ```
@@ -59,46 +65,14 @@ Using `zsh` (use latest: `brew install zsh`).
 
 Using [starship](https://starship.rs/) (`brew install starship`).
 
-Using [Hack Nerd Font](https://www.nerdfonts.com/font-downloads) with [Nerd Font Symbols](https://starship.rs/presets/#nerd-font-symbols) starship preset for maximum icons and legibility (for symbols to render correctly, _do not_ use monospace font).
+Using [Hack Nerd Font](https://www.nerdfonts.com/font-downloads) with [Nerd Font Symbols](https://starship.rs/presets/#nerd-font-symbols) starship preset for maximum icons and legibility.
 
 Completion extensions (via brew):
 
-- zsh-autosuggestions
-- zsh-completions
-- zsh-syntax-highlighting
-- zsh-history-substring-search
-
-### Languages
-
-#### [node.js](http://nodejs.org)
-
-Install latest [`nvm`](https://github.com/creationix/nvm) to manage node versions.
-
-```
-brew install nvm
-```
-
-Install latest LTS node:
-
-```
-nvm i --lts
-```
-
-**Note:** I used to work more with ruby, python, and go, but it's been so long the relevant sections here were outdated, so I removed them.
-
-### Databases
-
-#### [postgres](http://www.postgresql.org/)
-
-```
-brew install postgres
-```
-
-#### [redis](http://redis.io/)
-
-```
-brew install redis
-```
+- `zsh-autosuggestions`
+- `zsh-completions`
+- `zsh-history-substring-search`
+- `zsh-syntax-highlighting`
 
 ## Config
 
