@@ -30,6 +30,8 @@ continuation_prompt = '▶▶'
 
 command_timeout = 1000
 
+add_newline = false
+
 [sudo]
 format = '[as $symbol]($style)'
 disabled = false
@@ -60,8 +62,6 @@ detect_folders = ['environments']
 [kubernetes.context_aliases]
 'arn:aws:eks:us-west-2:\d+:cluster/(?P<var_cluster>[\w-]+)' = '$var_cluster'
 
-### NERD FONTS v3
-
 [aws]
 symbol = "  "
 
@@ -82,6 +82,9 @@ symbol = " "
 
 [directory]
 read_only = " 󰌾"
+truncate_to_repo = true
+truncation_length = 3
+repo_root_style = 'bold 25'
 
 [docker_context]
 symbol = " "
@@ -99,7 +102,12 @@ symbol = " "
 symbol = " "
 
 [git_branch]
+format = "[$symbol$branch(:$remote_branch)]($style) "
 symbol = " "
+style = "green"
+
+[git_status]
+format = "([$all_status$ahead_behind]($style) )"
 
 [golang]
 symbol = " "
@@ -222,5 +230,3 @@ symbol = " "
 
 [zig]
 symbol = " "
-
-### END NERD FONTS v3
