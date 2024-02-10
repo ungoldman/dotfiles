@@ -3,7 +3,6 @@
 # ref: https://starship.rs/config
 
 format = """
-$time\
 $shlvl\
 $username\
 $hostname\
@@ -23,6 +22,9 @@ $container\
 $shell\
 $kubernetes\
 $character"""
+
+# $time\
+# $sudo\
 
 # right_format = '$time'
 
@@ -44,8 +46,9 @@ disabled = false
 [cmd_duration]
 # show_notifications = true
 min_time = 1_000
-# show_milliseconds = true
+show_milliseconds = true
 format = '[$duration]($style) '
+style = 'yellow'
 
 [shlvl]
 symbol = '→'
@@ -81,10 +84,11 @@ symbol = " "
 symbol = " "
 
 [directory]
+style = "cyan"
 read_only = " 󰌾"
 truncate_to_repo = true
 truncation_length = 3
-repo_root_style = 'bold 25'
+repo_root_style = "39"
 
 [docker_context]
 symbol = " "
@@ -104,7 +108,7 @@ symbol = " "
 [git_branch]
 format = "[$symbol$branch(:$remote_branch)]($style) "
 symbol = " "
-style = "green"
+style = "40"
 
 [git_status]
 format = "([$all_status$ahead_behind]($style) )"
