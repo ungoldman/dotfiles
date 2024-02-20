@@ -8,7 +8,6 @@
   ca = commit --amend
   cm = commit -m
   co = checkout
-  com = checkout $(git_main_branch)
   d = diff
   done = branch --merged
   ds = diff --staged
