@@ -3,6 +3,9 @@ alias edit='code'
 alias dotfiles='edit $DOTFILES'
 alias cddotfiles='cd $DOTFILES'
 
+# git
+alias gcomb='git checkout $(git_main_branch)'
+
 # utils
 alias l='ls -FlAGh'
 alias grep='grep --color=auto'
