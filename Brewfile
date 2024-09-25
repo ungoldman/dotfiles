@@ -14,9 +14,6 @@ brew 'bat' # cat with wings
 brew 'tig' # ncurses git repo browser
 brew 'htop' # fancy top
 
-# node
-brew 'nvm'
-
 # github
 brew 'gh'
 
@@ -29,5 +26,7 @@ cask 'appcleaner'
 cask 'balance-lock'
 cask 'caffeine'
 cask 'coconutbattery'
+cask 'discord'
 cask 'iterm2'
-cask 'visual-studio-code'
+cask 'slack'
+cask 'vscodium'

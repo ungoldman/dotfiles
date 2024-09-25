@@ -1,7 +1,6 @@
 # edit
-alias edit='code'
-alias dotfiles='edit $DOTFILES'
-alias cddotfiles='cd $DOTFILES'
+alias code='codium'
+alias dotfiles='cd $DOTFILES && codium $DOTFILES'
 
 # git
 alias gcomb='git checkout $(git_main_branch)'
