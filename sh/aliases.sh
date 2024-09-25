@@ -1,4 +1,5 @@
 # edit
+alias c='codium'
 alias code='codium'
 alias dotfiles='cd $DOTFILES && codium $DOTFILES'
 
