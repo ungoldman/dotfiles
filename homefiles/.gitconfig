@@ -32,7 +32,7 @@
   excludesfile = ~/.gitignore_global
   autocrlf = input
   ignorecase = false
-  editor = code -nw
+  editor = codium -nw
 [push]
   default = simple
   autoSetupRemote = true
