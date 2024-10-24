@@ -1,7 +1,7 @@
 # edit
-alias c='codium'
-alias code='codium'
-alias dotfiles='codium $DOTFILES'
+alias c='code'
+alias code='code'
+alias dotfiles='code $DOTFILES'
 alias cddotfiles='cd $DOTFILES'
 
 # git
