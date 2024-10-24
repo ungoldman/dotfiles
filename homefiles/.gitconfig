@@ -13,6 +13,7 @@
   ds = diff --staged
   dw = diff --word-diff
   dws = diff --word-diff --staged
+  force = push --force-with-lease
   h = alias
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   lastchange = log -p --follow -n 1
@@ -32,7 +33,7 @@
   excludesfile = ~/.gitignore_global
   autocrlf = input
   ignorecase = false
-  editor = codium -nw
+  editor = code -nw
 [push]
   default = simple
   autoSetupRemote = true

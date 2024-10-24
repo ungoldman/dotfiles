@@ -4,9 +4,9 @@ export PATH=$PATH:./node_modules/.bin
 # make sure brew paths precede /usr/bin
 # export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
-# set codium as default editor
-export EDITOR='codium -nw'
-export VISUAL='codium -nw'
+# set code as default editor
+export EDITOR='code -nw'
+export VISUAL='code -nw'
 
 # pretty colors
 export CLICOLOR=1
