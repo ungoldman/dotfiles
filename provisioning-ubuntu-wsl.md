@@ -38,16 +38,27 @@
 
     gh auth login
 
-1. install starship
-
-    curl -sS https://starship.rs/install.sh | sh
-
 1. install dotfiles
 
     gh repo clone dotfiles
 
+1. install homebrew on linux! https://brew.sh/
+
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 1. install zsh & friends
 
-    sudo apt install zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting
+    brew install zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting starship
 
-    (zsh-completions not working)
+1. settings in .zshrc have been reconfigured for linux, ymmv
+
+1. add starship prefs in `~/.config/starship.tml` -- see prefs. hack font symbols not working yet
+
+1. install [wsl utilities](https://github.com/wslutilities/wslu)
+
+    sudo apt install ubuntu-wsl
+    sudo add-apt-repository ppa:wslutilities/wslu
+    sudo apt update
+    sudo apt install wslu
+
+1. set browser in .zshrc (set up in `sh/browser.sh`) -- totally works!
