@@ -12,7 +12,7 @@ alias l='ls -FlAGh'
 alias grep='grep --color=auto'
 alias tree="find . -print | sed -e 's;[^/]*/;|__;g;s;__|; |;g' | less"
 
-if [[ -r "/opt/homebrew/bin/bat" ]]; then
+if [[ -r "$(brew --prefix)/bin/bat" ]]; then
   alias c='bat';
 else
   alias c='pygmentize -g';
@@ -23,7 +23,7 @@ alias rebash='source ~/.bash_profile'
 alias simpler='echo; export PS1="❯ "'
 
 # zsh helpers
-alias rezsh='exec zsh'
+alias rezsh='exec zsh -l'
 
 # docker helpers
 alias dc='docker compose'

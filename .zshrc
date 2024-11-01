@@ -24,13 +24,13 @@ if type brew &>/dev/null; then
   autoload -Uz compinit && compinit
 
   # brew install zsh-autosuggestions
-  source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
   # brew install zsh-syntax-highlighting
-  source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
   # brew install zsh-history-substring-search
-  source /home/linuxbrew/.linuxbrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+  source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
   # aws tab completion
   # https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html

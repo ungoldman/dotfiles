@@ -52,7 +52,9 @@
 
 1. settings in .zshrc have been reconfigured for linux, ymmv
 
-1. add starship prefs in `~/.config/starship.tml` -- see prefs. hack font symbols not working yet
+1. install [Hack Nerd Font Mono](https://www.nerdfonts.com/font-downloads) on windows, set as default font for all profiles in command prompt settings
+
+1. add starship prefs in `~/.config/starship.tml`
 
 1. install [wsl utilities](https://github.com/wslutilities/wslu)
 
@@ -62,3 +64,13 @@
     sudo apt install wslu
 
 1. set browser in .zshrc (set up in `sh/browser.sh`) -- totally works!
+
+1. install nvm & latest node
+
+    # install via bash script (only option)
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+    # reload shell
+    exec zsh -l
+    # install node and set as default
+    nvm install 20
+    nvm alias default 20
