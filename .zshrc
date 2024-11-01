@@ -1,5 +1,5 @@
 # homebrew
-[[ -r "/opt/homebrew/bin/brew" ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # starship
 eval "$(starship init zsh)"
@@ -24,13 +24,13 @@ if type brew &>/dev/null; then
   autoload -Uz compinit && compinit
 
   # brew install zsh-autosuggestions
-  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
   # brew install zsh-syntax-highlighting
-  source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
   # brew install zsh-history-substring-search
-  source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+  source /home/linuxbrew/.linuxbrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
   # aws tab completion
   # https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html
