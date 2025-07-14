@@ -13,9 +13,14 @@ brew 'zsh-syntax-highlighting'
 brew 'bat' # cat with wings
 brew 'tig' # ncurses git repo browser
 brew 'htop' # fancy top
+brew 'coreutils' # gnu linux core utils (better ls, grep, etc)
 
 # github
 brew 'gh'
+
+# etc
+brew 'nvm'
+brew 'yarn'
 
 # img utils
 brew 'imagemagick'
@@ -26,7 +31,8 @@ cask 'appcleaner'
 cask 'balance-lock'
 cask 'caffeine'
 cask 'coconutbattery'
-cask 'discord'
 cask 'iterm2'
+
+# work necessities
 cask 'slack'
-cask 'vscodium'
+cask 'vscode'
