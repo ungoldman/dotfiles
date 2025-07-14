@@ -8,7 +8,13 @@ alias cddotfiles='cd $DOTFILES'
 alias gcomb='git checkout $(git_main_branch)'
 
 # utils
-alias l='ls -FlAGh'
+if [[ -r "/opt/homebrew/bin/gls" ]]; then
+  alias ls='gls --color=auto';
+  alias l='ls -FlAGh --group-directories-first';
+else
+  alias ls='ls --color=auto';
+  alias l='ls -FlAGh';
+fi
 alias grep='grep --color=auto'
 alias tree="find . -print | sed -e 's;[^/]*/;|__;g;s;__|; |;g' | less"
 
