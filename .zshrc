@@ -21,7 +21,14 @@ if type brew &>/dev/null; then
   # brew install zsh-completions
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
   autoload bashcompinit && bashcompinit
-  autoload -Uz compinit && compinit
+  # Run the full compinit security audit (slow fpath scan) at most once a day;
+  # otherwise trust the cached dump and skip it with -C for faster startup.
+  autoload -Uz compinit
+  if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+    compinit
+  else
+    compinit -C
+  fi
 
   # brew install zsh-autosuggestions
   source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
