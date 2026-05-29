@@ -1,6 +1,4 @@
-# edit
-alias c='code'
-alias code='code'
+# edit dotfiles
 alias dotfiles='code $DOTFILES'
 alias cddotfiles='cd $DOTFILES'
 
