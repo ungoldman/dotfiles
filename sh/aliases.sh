@@ -22,10 +22,6 @@ else
   alias c='pygmentize -g';
 fi
 
-# bash helpers
-alias rebash='source ~/.bash_profile'
-alias simpler='echo; export PS1="❯ "'
-
 # zsh helpers
 alias rezsh='exec zsh'
 
