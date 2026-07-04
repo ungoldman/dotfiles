@@ -2,7 +2,7 @@
 
 # ungoldman/dotfiles
 
-![](https://49.media.tumblr.com/8037b4adc4528f816a87eab93bbb1805/tumblr_np8i3bXp5g1qzdg48o1_500.gif)
+![](./hackerman.gif)
 
 **These are my dotfiles. There are many like them, but these ones are mine.**
 
