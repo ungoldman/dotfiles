@@ -1,6 +1,4 @@
-# edit
-alias c='code'
-alias code='code'
+# edit dotfiles
 alias dotfiles='code $DOTFILES'
 alias cddotfiles='cd $DOTFILES'
 
@@ -8,7 +6,13 @@ alias cddotfiles='cd $DOTFILES'
 alias gcomb='git checkout $(git_main_branch)'
 
 # utils
-alias l='ls -FlAGh'
+if [[ -r "/opt/homebrew/bin/gls" ]]; then
+  alias ls='gls --color=auto';
+  alias l='ls -FlAGh --group-directories-first';
+else
+  alias ls='ls --color=auto';
+  alias l='ls -FlAGh';
+fi
 alias grep='grep --color=auto'
 alias tree="find . -print | sed -e 's;[^/]*/;|__;g;s;__|; |;g' | less"
 
@@ -17,10 +21,6 @@ if [[ -r "$(brew --prefix)/bin/bat" ]]; then
 else
   alias c='pygmentize -g';
 fi
-
-# bash helpers
-alias rebash='source ~/.bash_profile'
-alias simpler='echo; export PS1="❯ "'
 
 # zsh helpers
 alias rezsh='exec zsh -l'
