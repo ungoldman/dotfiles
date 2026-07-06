@@ -2,7 +2,7 @@
 
 # ungoldman/dotfiles
 
-![](./hackerman.gif)
+![hackerman](./hackerman.gif)
 
 **These are my dotfiles. There are many like them, but these ones are mine.**
 
