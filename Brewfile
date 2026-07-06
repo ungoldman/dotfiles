@@ -14,6 +14,7 @@ brew 'bat' # cat with wings
 brew 'tig' # ncurses git repo browser
 brew 'htop' # fancy top
 brew 'coreutils' # gnu linux core utils (better ls, grep, etc)
+brew 'tmux'
 
 # github
 brew 'gh'
@@ -22,9 +23,19 @@ brew 'gh'
 brew 'nvm'
 brew 'yarn'
 
+# macos utils
+brew 'defaultbrowser'
+brew 'duti'
+
+# dev utils
+brew 'shellcheck'
+brew 'mkcert'
+brew 'pwgen'
+
 # img utils
 brew 'imagemagick'
 brew 'graphicsmagick'
+brew 'charmbracelet/tap/freeze'
 
 # apps
 cask 'appcleaner'
@@ -34,5 +45,8 @@ cask 'coconutbattery'
 cask 'iterm2'
 
 # work necessities
+brew 'awscli'
+brew 'k9s'
+brew 'kubectx'
 cask 'slack'
-cask 'vscode'
+cask 'visual-studio-code'
