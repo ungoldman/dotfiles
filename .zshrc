@@ -1,5 +1,6 @@
-# homebrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# homebrew (macos or linuxbrew, whichever is present)
+[[ -r "/opt/homebrew/bin/brew" ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+[[ -r "/home/linuxbrew/.linuxbrew/bin/brew" ]] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # starship
 eval "$(starship init zsh)"
@@ -42,7 +43,7 @@ if type brew &>/dev/null; then
   # aws tab completion
   # https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html
   if type aws &>/dev/null; then
-    complete -C '/opt/homebrew/bin/aws_completer' aws
+    complete -C "$(brew --prefix)/bin/aws_completer" aws
   fi
 fi
 
