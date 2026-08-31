@@ -3,36 +3,36 @@
 # ref: https://starship.rs/config
 
 format = """
+$time($cmd_duration)
 $shlvl\
 $username\
 $hostname\
-$localip\
 $directory\
 $git_branch\
 $git_commit\
 $git_state\
-$git_metrics\
 $git_status\
-$package\
 $custom\
-$cmd_duration\
 $jobs\
-$battery\
 $container\
-$shell\
 $kubernetes\
 $character"""
 
 # $time\
 # $sudo\
+# $localip\
+# $git_metrics\
+# $package\
+# $battery\
+# $shell\
 
 # right_format = '$time'
 
 continuation_prompt = '▶▶'
 
-command_timeout = 1000
+command_timeout = 5000
 
-add_newline = false
+# add_newline = false
 
 [sudo]
 format = '[as $symbol]($style)'
@@ -45,10 +45,10 @@ disabled = false
 
 [cmd_duration]
 # show_notifications = true
-min_time = 1_000
+min_time = 2_000
 show_milliseconds = true
-format = '[$duration]($style) '
-style = 'yellow'
+format = '[\($duration\)]($style) '
+style = 'dimmed'
 
 [shlvl]
 symbol = '→'
@@ -62,8 +62,9 @@ disabled = false
 style = 'dimmed'
 detect_folders = ['environments']
 
-[kubernetes.context_aliases]
-'arn:aws:eks:us-west-2:\d+:cluster/(?P<var_cluster>[\w-]+)' = '$var_cluster'
+[[kubernetes.contexts]]
+context_pattern = '.*cluster/(?P<cluster>[\w-]+)'
+context_alias = "$cluster"
 
 [aws]
 symbol = "  "
