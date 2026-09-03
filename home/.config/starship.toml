@@ -3,7 +3,7 @@
 # ref: https://starship.rs/config
 
 format = """
-$time($cmd_duration)
+$time($cmd_duration)\
 $shlvl\
 $username\
 $hostname\
@@ -32,7 +32,7 @@ continuation_prompt = '▶▶'
 
 command_timeout = 5000
 
-# add_newline = false
+add_newline = false
 
 [sudo]
 format = '[as $symbol]($style)'
