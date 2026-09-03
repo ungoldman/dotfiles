@@ -51,7 +51,7 @@ idempotent and never overwrites an existing file: conflicts are reported and
 skipped (non-zero exit). Pass `--force` to move each conflicting target to
 `<target>.bak-<timestamp>` first.
 
-Apply the manual steps in [`manual/`](manual/) (iTerm colors, ..).
+Apply the manual steps in [`manual/`](manual/) (iTerm profile, ..).
 
 Create `~/.gitconfig.local` with your machine identity (kept out of the repo,
 pulled in via `[include]` from the tracked `.gitconfig`)

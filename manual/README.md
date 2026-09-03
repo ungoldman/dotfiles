@@ -2,5 +2,6 @@
 
 Config that can't be symlinked and needs a one-time manual step.
 
-- `latest.itermcolors` — iTerm2 color preset. Import via Settings > Profiles >
-  Colors > Color Presets > Import, then select it.
+- `iterm-profile.json` — iTerm2 profile (colors, font, window, status bar).
+  Import via Settings > Profiles > Other Actions > Import JSON Profiles, then set
+  it as default. Replaces the profile in place on re-import (matched by GUID).
