@@ -37,6 +37,9 @@ brew 'imagemagick'
 brew 'graphicsmagick'
 brew 'charmbracelet/tap/freeze'
 
+# fonts
+cask 'font-hack-nerd-font' # starship nerd font symbols preset
+
 # apps
 cask 'appcleaner'
 cask 'balance-lock'
