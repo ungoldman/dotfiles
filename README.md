@@ -34,32 +34,26 @@ Install packages in Brewfile
 cd ~/dotfiles && brew bundle
 ```
 
+Symlink dotfiles into place (skips existing files, `--force` backs them up)
+
+```sh
+cd ~/dotfiles && ./link.sh
+```
+
 Add this line to `~/.zshrc`
 
 ```sh
 source ~/dotfiles/init.sh
 ```
 
-Symlink dotfiles into place
-
-```sh
-cd ~/dotfiles && ./link.sh
-```
-
-`link.sh` mirrors everything under `home/` into `$HOME` as symlinks. It is
-idempotent and never overwrites an existing file: conflicts are reported and
-skipped (non-zero exit). Pass `--force` to move each conflicting target to
-`<target>.bak-<timestamp>` first.
-
-Apply the manual steps in [`manual/`](manual/) (iTerm profile, ..).
-
-Create `~/.gitconfig.local` with your machine identity (kept out of the repo,
-pulled in via `[include]` from the tracked `.gitconfig`)
+Set your git identity (untracked, pulled in via `[include]`)
 
 ```sh
 git config --file ~/.gitconfig.local user.name "Your Name"
 git config --file ~/.gitconfig.local user.email "you@example.com"
 ```
+
+Apply the manual steps in [`manual/`](manual/) (iTerm profile, ..).
 
 > [!NOTE]
 > Currently configured for `zsh` only. Will not work with other shells.
