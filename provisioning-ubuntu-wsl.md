@@ -54,10 +54,9 @@
 
     # settings in .zshrc have been reconfigured for linux, very first draft
     gh repo clone dotfiles
+    cd dotfiles && ./link.sh
 
 1. install [Hack Nerd Font Mono](https://www.nerdfonts.com/font-downloads) on windows, set as default font for all profiles in command prompt settings
-
-1. add starship prefs in `~/.config/starship.tml`
 
 1. install [wsl utilities](https://github.com/wslutilities/wslu)
 

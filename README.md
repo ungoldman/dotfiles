@@ -40,6 +40,27 @@ Add this line to `~/.zshrc`
 source ~/dotfiles/init.sh
 ```
 
+Symlink dotfiles into place
+
+```sh
+cd ~/dotfiles && ./link.sh
+```
+
+`link.sh` mirrors everything under `home/` into `$HOME` as symlinks. It is
+idempotent and never overwrites an existing file: conflicts are reported and
+skipped (non-zero exit). Pass `--force` to move each conflicting target to
+`<target>.bak-<timestamp>` first.
+
+Apply the manual steps in [`manual/`](manual/) (iTerm colors, ..).
+
+Create `~/.gitconfig.local` with your machine identity (kept out of the repo,
+pulled in via `[include]` from the tracked `.gitconfig`)
+
+```sh
+git config --file ~/.gitconfig.local user.name "Your Name"
+git config --file ~/.gitconfig.local user.email "you@example.com"
+```
+
 > [!NOTE]
 > Currently configured for `zsh` only. Will not work with other shells.
 
@@ -66,13 +87,17 @@ Zsh completion extensions (via brew):
 
 The `init.sh` file at the root of this repo will attempt to source any `.sh` file in the `sh` directory. Git will ignore `sh/private.sh`, as well as any `.sh` file prefixed with `_`. Use this to include anything that shouldn't be checked into version control (secrets, device-specific commands & aliases, etc).
 
-### `/homefiles`
+### `/home`
 
-A collection of files for your home directory (like `.gitconfig`, `.inputrc`, ..).
+Mirror of `$HOME`. `link.sh` symlinks every file here to the same path under
+`$HOME` (`home/.config/starship.toml` -> `~/.config/starship.toml`). Add a file
+at its real relative path and it gets linked on the next run. Machine-local git
+identity lives in `~/.gitconfig.local` (untracked, pulled in via `[include]`).
 
-### `/prefs`
+### `/manual`
 
-Misc preference files for apps & programs.
+Config that can't be symlinked and needs a one-time manual step. See
+`manual/README.md`.
 
 ### `/remote`
 
