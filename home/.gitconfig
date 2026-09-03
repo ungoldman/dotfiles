@@ -1,0 +1,47 @@
+[color]
+  ui = auto
+[alias]
+  a = add
+  alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+  b = branch
+  c = commit
+  ca = commit --amend
+  cm = commit -m
+  co = checkout
+  cp = cherry-pick
+  d = diff
+  done = branch --merged
+  ds = diff --staged
+  dw = diff --word-diff
+  dws = diff --word-diff --staged
+  force = push --force-with-lease
+  h = alias
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  lastchange = log -p --follow -n 1
+  praise = blame
+  r = remote
+  s = status
+  t = tag --sort=v:refname
+  sup = branch --all --verbose
+  todo = branch --no-merged
+  unstage = reset HEAD --
+  update = fetch --all --prune
+[credential]
+  helper = osxkeychain
+[mergetool]
+  keepBackup = true
+[core]
+  excludesfile = ~/.gitignore_global
+  autocrlf = input
+  ignorecase = false
+  editor = code -nw
+[push]
+  default = simple
+  autoSetupRemote = true
+[init]
+  defaultBranch = main
+[rerere]
+  enabled = true
+# machine-local identity + overrides, untracked
+[include]
+  path = ~/.gitconfig.local
