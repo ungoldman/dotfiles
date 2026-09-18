@@ -46,15 +46,18 @@
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-1. install zsh & friends
-
-    brew install zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting starship
-
 1. install dotfiles for maximum config (ungoldman only)
 
-    # settings in .zshrc have been reconfigured for linux, very first draft
     gh repo clone dotfiles
-    cd dotfiles && ./link.sh
+    cd dotfiles
+
+1. install packages in Brewfile (zsh & friends, term utils, etc. macos-only formulae and casks are skipped automatically)
+
+    brew bundle
+
+1. symlink dotfiles into place (skips existing files, `--force` backs them up)
+
+    ./link.sh
 
 1. install [Hack Nerd Font Mono](https://www.nerdfonts.com/font-downloads) on windows, set as default font for all profiles in command prompt settings
 
@@ -65,7 +68,7 @@
     sudo apt update
     sudo apt install wslu
 
-1. set browser in .zshrc (set up in `sh/browser.sh`) -- totally works with gh browse!
+1. browser is set in `sh/ubuntu-wsl.sh` -- totally works with gh browse!
 
     export BROWSER=wslview
 
