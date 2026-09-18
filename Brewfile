@@ -23,8 +23,11 @@ end
 brew 'gh'
 
 # etc
-brew 'nvm'
 brew 'yarn'
+
+if OS.mac?
+  brew 'nvm' # linux/wsl installs nvm via the curl script instead, see provisioning-ubuntu-wsl.md
+end
 
 if OS.mac?
   # macos utils

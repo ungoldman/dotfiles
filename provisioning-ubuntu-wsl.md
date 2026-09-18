@@ -72,9 +72,8 @@
 
     export BROWSER=wslview
 
-1. install nvm & latest node
+1. install nvm & latest node (Brewfile skips the nvm formula on linux, `sh/ubuntu-wsl.sh` expects this layout)
 
-    # install via bash script (only option)
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
     # reload shell
     exec zsh -l
