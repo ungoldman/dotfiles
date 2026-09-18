@@ -13,8 +13,11 @@ brew 'zsh-syntax-highlighting'
 brew 'bat' # cat with wings
 brew 'tig' # ncurses git repo browser
 brew 'htop' # fancy top
-brew 'coreutils' # gnu linux core utils (better ls, grep, etc)
 brew 'tmux'
+
+if OS.mac?
+  brew 'coreutils' # gnu core utils (better ls, grep, etc), already native on linux
+end
 
 # github
 brew 'gh'
@@ -23,9 +26,11 @@ brew 'gh'
 brew 'nvm'
 brew 'yarn'
 
-# macos utils
-brew 'defaultbrowser'
-brew 'duti'
+if OS.mac?
+  # macos utils
+  brew 'defaultbrowser'
+  brew 'duti'
+end
 
 # dev utils
 brew 'shellcheck'
@@ -37,19 +42,24 @@ brew 'imagemagick'
 brew 'graphicsmagick'
 brew 'charmbracelet/tap/freeze'
 
-# fonts
-cask 'font-hack-nerd-font' # starship nerd font symbols preset
+if OS.mac?
+  # fonts
+  cask 'font-hack-nerd-font' # starship nerd font symbols preset
 
-# apps
-cask 'appcleaner'
-cask 'balance-lock'
-cask 'caffeine'
-cask 'coconutbattery'
-cask 'iterm2'
+  # apps
+  cask 'appcleaner'
+  cask 'balance-lock'
+  cask 'caffeine'
+  cask 'coconutbattery'
+  cask 'iterm2'
+end
 
 # work necessities
 brew 'awscli'
 brew 'k9s'
 brew 'kubectx'
-cask 'slack'
-cask 'visual-studio-code'
+
+if OS.mac?
+  cask 'slack'
+  cask 'visual-studio-code'
+end
