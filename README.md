@@ -58,6 +58,12 @@ Apply the manual steps in [`manual/`](manual/) (iTerm profile, ..).
 > [!NOTE]
 > Currently configured for `zsh` only. Will not work with other shells.
 
+## Fresh Install (Ubuntu/WSL)
+
+See [`provisioning-ubuntu-wsl.md`](provisioning-ubuntu-wsl.md). Same `link.sh`
+and `init.sh` as macOS. `Brewfile` also works via linuxbrew, macOS-only
+formulae and casks are skipped automatically.
+
 ## Tools
 
 ### zsh
