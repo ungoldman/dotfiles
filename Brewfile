@@ -27,6 +27,7 @@ brew 'yarn'
 
 if OS.mac?
   brew 'nvm' # linux/wsl installs nvm via the curl script instead, see provisioning-ubuntu-wsl.md
+  brew 'mise' # erlang/elixir versions
 end
 
 if OS.mac?
