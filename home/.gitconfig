@@ -35,6 +35,7 @@
   autocrlf = input
   ignorecase = false
   editor = code -nw
+  hooksPath = ~/.config/git/hooks
 [push]
   default = simple
   autoSetupRemote = true

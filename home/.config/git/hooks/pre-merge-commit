@@ -1,0 +1,6 @@
+#!/bin/sh
+# core.hooksPath disables .git/hooks, so forward to the repo's own hook
+
+hook="$(git rev-parse --git-common-dir)/hooks/$(basename "$0")"
+[ -x "$hook" ] && exec "$hook" "$@"
+exit 0
