@@ -25,25 +25,25 @@ Install homebrew
 Clone repo
 
 ```sh
-git clone git@github.com:ungoldman/dotfiles.git
+git clone git@github.com:ungoldman/dotfiles.git ~/dev/dotfiles
 ```
 
 Install packages in Brewfile
 
 ```sh
-cd ~/dotfiles && brew bundle
+cd ~/dev/dotfiles && brew bundle
 ```
 
 Symlink dotfiles into place (skips existing files, `--force` backs them up)
 
 ```sh
-cd ~/dotfiles && ./link.sh
+cd ~/dev/dotfiles && ./link.sh
 ```
 
 Add this line to `~/.zshrc`
 
 ```sh
-source ~/dotfiles/init.sh
+source ~/dev/dotfiles/init.sh
 ```
 
 Set your git identity (untracked, pulled in via `[include]`)
