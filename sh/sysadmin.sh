@@ -1,4 +1,4 @@
-alias listusers="awk -F':' '{ print $1}' /etc/passwd"
+alias listusers="awk -F':' '{ print \$1 }' /etc/passwd"
 
 # grep '^group_name:.*$' /etc/group | cut -d: -f4
 alias groupmembers="cat /etc/group"
