@@ -2,6 +2,9 @@
 alias dotfiles='code $DOTFILES'
 alias cddotfiles='cd $DOTFILES'
 
+# dev dir
+alias dev='cd ~/dev'
+
 # git
 alias gcomb='git checkout $(git_main_branch)'
 
