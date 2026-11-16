@@ -42,6 +42,14 @@
   defaultBranch = main
 [rerere]
   enabled = true
+[pull]
+  ff = only
+[merge]
+  conflictstyle = zdiff3
+[diff]
+  colorMoved = default
+[commit]
+  verbose = true
 # machine-local identity + overrides, untracked
 [include]
   path = ~/.gitconfig.local
