@@ -24,3 +24,6 @@ export IGNOREEOF=12
 # disable homebrew analytics
 # https://docs.brew.sh/Analytics
 export HOMEBREW_NO_ANALYTICS=1
+
+# persist iex/erl shell history across sessions
+export ERL_AFLAGS="-kernel shell_history enabled"
