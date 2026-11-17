@@ -11,8 +11,10 @@ brew 'zsh-syntax-highlighting'
 
 # term utils
 brew 'bat' # cat with wings
+brew 'jj' # jujutsu, git-compatible vcs
 brew 'tig' # ncurses git repo browser
 brew 'htop' # fancy top
+brew 'ripgrep' # fast grep
 brew 'tmux'
 
 if OS.mac?
